@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which subject line is the best?"
+    options:
+      - "Hi"
+      - "Urgent!!!"
+      - "Action needed: review pull request 482 by Thursday"
+    answer: 2
+    explanation: "A strong subject is specific. It names the topic, the action and the deadline."
+  - kind: single
+    prompt: "What is a clearer replacement for 'Please do the needful'?"
+    options:
+      - "Please do it."
+      - "Please update the ticket by Monday."
+      - "Kindly revert."
+    answer: 1
+    explanation: "State exactly what you need and by when. 'The needful' is vague."
+  - kind: multiple
+    prompt: "Select all the things to check before sending a work email."
+    options:
+      - "The subject is specific"
+      - "The action and deadline are clear"
+      - "The Cc list is correct"
+      - "The email has at least five topics"
+    answer: [0, 1, 2]
+    explanation: "One topic per email is easier to answer. Always check the subject, the action and the recipients."
+  - kind: true-false
+    prompt: "It is better to start a work email with the main point than with a long introduction."
+    answer: true
+    explanation: "The reader should know the purpose within a few seconds."

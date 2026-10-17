@@ -1,0 +1,62 @@
+slug: koko-eating-bananas
+title: Koko Eating Bananas
+difficulty: medium
+topics: [arrays, binary-search, binary-search-on-answer]
+lesson: binary-search-on-answer
+function: minEatingSpeed
+statement: |
+  Koko has `n` piles of bananas, where pile `i` has `piles[i]` bananas. The guards will return in `h` hours.
+
+  Koko chooses an eating speed of `k` bananas per hour. Each hour she picks one pile and eats up to `k` bananas from it. If the pile has fewer than `k` bananas she eats the whole pile and does nothing more that hour.
+
+  Return the **minimum integer speed `k`** that lets her finish all the bananas within `h` hours.
+constraints: |
+  - `1 <= piles.length <= 10^4`
+  - `piles.length <= h <= 10^9`
+  - `1 <= piles[i] <= 10^9`
+examples:
+  - input: "piles = [3, 6, 7, 11], h = 8"
+    output: "4"
+    explanation: "At speed 4 the piles take 1 + 2 + 2 + 3 = 8 hours."
+  - input: "piles = [30, 11, 23, 4, 20], h = 5"
+    output: "30"
+    explanation: "There are exactly as many hours as piles, so she must finish the biggest pile in one hour."
+starter: |
+  function minEatingSpeed(piles: number[], h: number): number {
+    return 0;
+  }
+tests:
+  - { args: [[3, 6, 7, 11], 8], expected: 4 }
+  - { args: [[30, 11, 23, 4, 20], 5], expected: 30 }
+  - { args: [[30, 11, 23, 4, 20], 6], expected: 23 }
+  - { args: [[1], 1], expected: 1, hidden: true }
+  - { args: [[312884470], 312884469], expected: 2, hidden: true }
+  - { args: [[1, 1, 1, 1], 4], expected: 1, hidden: true }
+  - { args: [[10, 10], 4], expected: 5, hidden: true }
+  - { args: [[805306368, 805306368, 805306368], 1000000000], expected: 3, hidden: true }
+hints:
+  - "Instead of searching the array, search the ANSWER: the speed k is between 1 and the largest pile."
+  - "For a given speed, the hours needed are the sum of `ceil(pile / speed)`. A faster speed never needs more hours."
+  - "Because 'enough hours' is monotonic in the speed, binary search the smallest speed for which the total hours are `<= h`."
+solution:
+  code: |
+    function minEatingSpeed(piles: number[], h: number): number {
+      const hoursNeeded = (speed: number): number => {
+        let hours = 0;
+        for (const pile of piles) hours += Math.ceil(pile / speed);
+        return hours;
+      };
+      let left = 1;
+      let right = Math.max(...piles);
+      while (left < right) {
+        const mid = left + Math.floor((right - left) / 2);
+        if (hoursNeeded(mid) <= h) right = mid;
+        else left = mid + 1;
+      }
+      return left;
+    }
+  explanation: |
+    The time needed never increases when Koko eats faster, so the feasibility of a speed is monotonic: slow speeds fail and fast speeds work. That makes the answer space (1 to the largest pile) binary-searchable. For each candidate speed, compute the hours with `ceil(pile / speed)` per pile. If the hours fit, try a slower speed; otherwise move up. The loop finds the smallest feasible speed.
+  time: O(n log M), where M is the largest pile
+  space: O(1)
+videos: [U2SozAs9RzA, IZP_8-JZqhM]

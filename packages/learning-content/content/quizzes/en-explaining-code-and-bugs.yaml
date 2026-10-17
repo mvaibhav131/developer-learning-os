@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What are the four steps of a clear bug explanation?"
+    options:
+      - "Problem, cause, fix, next step"
+      - "Apology, excuse, blame, promise"
+      - "Introduction, story, joke, conclusion"
+    answer: 0
+    explanation: "A simple shape: the problem, why it happens, what you did, and what comes next."
+  - kind: single
+    prompt: "Which sentence is more precise?"
+    options:
+      - "The code is not working."
+      - "The code fails when the input list is empty."
+      - "There is some issue."
+    answer: 1
+    explanation: "Be exact. Say what happens and under which condition."
+  - kind: multiple
+    prompt: "Select all the words that show a reason or a result."
+    options:
+      - "because"
+      - "so"
+      - "however"
+      - "therefore"
+    answer: [0, 1, 3]
+    explanation: "Because gives a reason. So and therefore give a result. However shows contrast."
+  - kind: true-false
+    prompt: "A race condition means two actions interfere with each other and cause an unexpected result."
+    answer: true
+    explanation: "A race condition is a timing problem, for example two requests changing the same data at once."

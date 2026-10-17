@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What should you say when the interviewer asks, 'Do you have any questions for us?'"
+    options:
+      - "No, nothing."
+      - "What does your company do?"
+      - "What would success look like in the first three months?"
+    answer: 2
+    explanation: "A thoughtful question shows interest. Asking what the company does shows you did not research."
+  - kind: single
+    prompt: "When should you send a thank-you email after the interview?"
+    options:
+      - "Within about 24 hours"
+      - "After one month"
+      - "Never"
+    answer: 0
+    explanation: "A short email within a day is polite and keeps the conversation fresh."
+  - kind: multiple
+    prompt: "Select all the good topics for your questions."
+    options:
+      - "The work and the team"
+      - "Growth and learning opportunities"
+      - "Next steps in the process"
+      - "How soon you can take holidays"
+    answer: [0, 1, 2]
+    explanation: "Holidays and benefits can wait until the offer stage."
+  - kind: true-false
+    prompt: "Yes or no questions are the best because they are short."
+    answer: false
+    explanation: "Open questions starting with how, what or could you tell me start a real conversation."

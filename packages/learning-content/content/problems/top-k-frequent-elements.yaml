@@ -1,0 +1,61 @@
+slug: top-k-frequent-elements
+title: Top K Frequent Elements
+difficulty: medium
+topics: [arrays, hash-map, bucket-sort]
+lesson: hashmaps-and-frequency-counting
+function: topKFrequent
+ordering: any-order
+statement: |
+  Given an integer array `nums` and an integer `k`, return the `k` **most frequent** elements. You may return the answer in any order.
+
+  The answer is guaranteed to be unique: there is never a tie for the k-th position.
+constraints: |
+  - `1 <= nums.length <= 10^5`
+  - `-10^4 <= nums[i] <= 10^4`
+  - `k` is between 1 and the number of distinct elements
+  - Aim for better than `O(n log n)`
+examples:
+  - input: "nums = [1, 1, 1, 2, 2, 3], k = 2"
+    output: "[1, 2]"
+    explanation: "1 appears three times and 2 appears twice."
+  - input: "nums = [1], k = 1"
+    output: "[1]"
+starter: |
+  function topKFrequent(nums: number[], k: number): number[] {
+    return [];
+  }
+tests:
+  - { args: [[1, 1, 1, 2, 2, 3], 2], expected: [1, 2] }
+  - { args: [[1], 1], expected: [1] }
+  - { args: [[4, 1, -1, 2, -1, 2, 3], 2], expected: [-1, 2] }
+  - { args: [[1, 2], 2], expected: [1, 2], hidden: true }
+  - { args: [[3, 0, 1, 0], 1], expected: [0], hidden: true }
+  - { args: [[5, 5, 5, 5, 6, 6, 7], 1], expected: [5], hidden: true }
+  - { args: [[1, 1, 1, 2, 2, 3, 3, 3, 3], 2], expected: [3, 1], hidden: true }
+hints:
+  - "First count how often each number appears with a Map."
+  - "Sorting the distinct numbers by count works in O(n log n). Can you avoid sorting?"
+  - "A count can never be larger than n. Make an array of n + 1 buckets where bucket[c] holds the numbers that appear c times, then read from the highest bucket down."
+solution:
+  code: |
+    function topKFrequent(nums: number[], k: number): number[] {
+      const counts = new Map<number, number>();
+      for (const value of nums) counts.set(value, (counts.get(value) ?? 0) + 1);
+
+      const buckets: number[][] = Array.from({ length: nums.length + 1 }, () => []);
+      for (const [value, count] of counts) buckets[count].push(value);
+
+      const result: number[] = [];
+      for (let count = buckets.length - 1; count > 0 && result.length < k; count--) {
+        for (const value of buckets[count]) {
+          result.push(value);
+          if (result.length === k) break;
+        }
+      }
+      return result;
+    }
+  explanation: |
+    Count the occurrences first. A value can appear at most `n` times, so you can place each value into a bucket indexed by its count instead of sorting. Reading the buckets from the highest count downward yields the most frequent values first, and you stop after `k` values. Counting, bucketing and reading are each linear.
+  time: O(n)
+  space: O(n)
+videos: [YPTqKIgVk-k]

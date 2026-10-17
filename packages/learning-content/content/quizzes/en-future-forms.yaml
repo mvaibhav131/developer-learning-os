@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "A teammate says the server is down. You decide to look at it right now. What do you say?"
+    options:
+      - "I'm going to looking at it."
+      - "I'll look at it now."
+      - "I look at it now."
+    answer: 1
+    explanation: "Use will ('ll) for a decision made at the moment of speaking."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "If the tests will pass, I will merge."
+      - "If the tests pass, I will merge."
+      - "If the tests pass, I merge will."
+    answer: 1
+    explanation: "After if, when, before and until, use the present simple for the future. Will goes in the main clause."
+  - kind: multiple
+    prompt: "Select all the sentences that talk about a plan or arrangement."
+    options:
+      - "I'm going to write the tests tomorrow."
+      - "I'm meeting the client at 4 pm."
+      - "I'll check the logs now."
+      - "The release is on Friday at six."
+    answer: [0, 1]
+    explanation: "Going to and the present continuous show plans. 'I'll check' is a sudden decision and the last sentence is a timetable."
+  - kind: true-false
+    prompt: "'The meeting starts at 10 am' uses the present simple for a timetable."
+    answer: true
+    explanation: "The present simple is used for fixed schedules such as meetings, classes and trains."

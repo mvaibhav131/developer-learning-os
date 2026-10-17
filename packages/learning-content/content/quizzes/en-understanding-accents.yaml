@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does 'gonna' mean in fast speech?"
+    options:
+      - "going to"
+      - "got to"
+      - "gone"
+    answer: 0
+    explanation: "Gonna is a spoken reduction of going to. It is used in speech, not in formal writing."
+  - kind: single
+    prompt: "What is the best response when you do not understand someone's accent in a meeting?"
+    options:
+      - "Pretend that you understood"
+      - "Politely ask the person to repeat or to write it in the chat"
+      - "Leave the call"
+    answer: 1
+    explanation: "Asking politely is normal. Confirming the key points also helps."
+  - kind: multiple
+    prompt: "Select all the reductions that exist in fast speech."
+    options:
+      - "wanna for want to"
+      - "gotta for have to"
+      - "kinda for kind of"
+      - "hello for goodbye"
+    answer: [0, 1, 2]
+    explanation: "Wanna, gotta and kinda are common reductions."
+  - kind: true-false
+    prompt: "To be understood in a global team you must completely lose your Indian accent."
+    answer: false
+    explanation: "You need to be clear, not to change your accent. Word stress, clear sounds and a steady pace matter most."

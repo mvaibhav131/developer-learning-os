@@ -1,0 +1,28 @@
+{
+  "name": "@dlos/learning-content",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Version-controlled curriculum, 24-week roadmap template and AI lab definitions. Pure data: no UI, no database.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "validate": "tsx src/validate-cli.ts",
+    "videos:sync": "tsx src/sync-videos-cli.ts"
+  },
+  "dependencies": {
+    "@dlos/shared": "workspace:*",
+    "sucrase": "^3.35.1",
+    "yaml": "^2.9.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsx": "^4.23.15",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

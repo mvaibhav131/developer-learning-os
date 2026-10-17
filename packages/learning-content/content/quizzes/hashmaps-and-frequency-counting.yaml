@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the average time complexity of map.get(key)?"
+    options:
+      - "O(1)"
+      - "O(log n)"
+      - "O(n)"
+    answer: 0
+    explanation: "Hash map lookups are constant time on average."
+  - kind: single
+    prompt: "Why is if (map.get(x)) risky for a frequency map?"
+    options:
+      - "get is slow"
+      - "A stored count of 0 is falsy, so the check treats a present key as missing"
+      - "It throws an error for missing keys"
+    answer: 1
+    explanation: "Use map.has(x) or compare the result with undefined."
+  - kind: multiple
+    prompt: "Which are advantages of Map over a plain object as a hash map?"
+    options:
+      - "Keys can be numbers or objects"
+      - "map.size gives the number of entries"
+      - "No prototype keys such as constructor can clash"
+      - "Lookups are always O(1) in the worst case"
+    answer: [0, 1, 2]
+    explanation: "Hash maps are O(1) on average, but the worst case can be slower."
+  - kind: true-false
+    prompt: "For input with only lowercase English letters, a 26-slot array can replace a Map and uses O(1) space."
+    answer: true
+    explanation: "The alphabet is fixed, so the array size does not grow with the input."

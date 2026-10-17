@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does 'figure out' mean?"
+    options:
+      - "Find the answer or understand something"
+      - "Draw a picture"
+      - "Delete something"
+    answer: 0
+    explanation: "Figure out means to find the answer, for example: I couldn't figure out why the test failed."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "Please turn off it."
+      - "Please turn it off."
+      - "Please off turn it."
+    answer: 1
+    explanation: "With a separable phrasal verb, a pronoun goes in the middle."
+  - kind: multiple
+    prompt: "Select all the phrasal verbs that mean to cancel or delay."
+    options:
+      - "call off"
+      - "put off"
+      - "set up"
+      - "wrap up"
+    answer: [0, 1]
+    explanation: "Call off means cancel. Put off means delay. Set up means prepare and wrap up means finish."
+  - kind: true-false
+    prompt: "A phrasal verb often has a meaning that is different from its separate words."
+    answer: true
+    explanation: "For example, look up means search for information, and not just look in an upward direction."

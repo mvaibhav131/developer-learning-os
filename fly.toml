@@ -1,0 +1,38 @@
+# Fly.io: fly launch --no-deploy --copy-config   (pick your own app name, because names are global)
+#         fly volumes create dlos_data --size 1 --region bom
+#         fly secrets set BASIC_AUTH_USER=owner BASIC_AUTH_PASSWORD='a-long-passphrase'
+#         fly deploy
+# Template, not tested by the author. Change `app` and PUBLIC_URL to the name you chose.
+app = "developer-learning-os"
+primary_region = "bom"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  API_PORT = "8080"
+  PUBLIC_URL = "https://developer-learning-os.fly.dev"
+  TRUST_PROXY = "1"
+  APP_TIMEZONE = "Asia/Kolkata"
+
+[[mounts]]
+  source = "dlos_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    method = "GET"
+    path = "/api/v1/health"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "20s"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"

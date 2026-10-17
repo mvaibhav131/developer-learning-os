@@ -1,0 +1,57 @@
+slug: valid-palindrome
+title: Valid Palindrome
+difficulty: easy
+topics: [strings, two-pointers]
+lesson: two-pointers-opposite-ends
+function: isPalindrome
+statement: |
+  A phrase is a **palindrome** if, after converting all uppercase letters to lowercase and removing every character that is not a letter or a digit, it reads the same forward and backward.
+
+  Given a string `s`, return `true` if it is a palindrome, or `false` otherwise.
+constraints: |
+  - `1 <= s.length <= 2 * 10^5`
+  - `s` consists of printable ASCII characters
+examples:
+  - input: 's = "A man, a plan, a canal: Panama"'
+    output: "true"
+    explanation: 'After cleaning it becomes "amanaplanacanalpanama", which is a palindrome.'
+  - input: 's = "race a car"'
+    output: "false"
+    explanation: 'After cleaning it becomes "raceacar", which is not a palindrome.'
+starter: |
+  function isPalindrome(s: string): boolean {
+    return false;
+  }
+tests:
+  - { args: ["A man, a plan, a canal: Panama"], expected: true }
+  - { args: ["race a car"], expected: false }
+  - { args: [" "], expected: true }
+  - { args: ["0P"], expected: false, hidden: true }
+  - { args: ["ab_a"], expected: true, hidden: true }
+  - { args: [".,"], expected: true, hidden: true }
+  - { args: ["No 'x' in Nixon"], expected: true, hidden: true }
+  - { args: ["ab"], expected: false, hidden: true }
+hints:
+  - "You could build a cleaned string and compare it with its reverse, but that uses extra memory."
+  - "Place one pointer at each end. Skip characters that are not letters or digits."
+  - "Compare the two characters in lower case. If they differ, return false. Move both pointers inwards until they cross."
+solution:
+  code: |
+    function isPalindrome(s: string): boolean {
+      const isAlnum = (ch: string) => /[a-z0-9]/i.test(ch);
+      let left = 0;
+      let right = s.length - 1;
+      while (left < right) {
+        while (left < right && !isAlnum(s[left])) left++;
+        while (left < right && !isAlnum(s[right])) right--;
+        if (s[left].toLowerCase() !== s[right].toLowerCase()) return false;
+        left++;
+        right--;
+      }
+      return true;
+    }
+  explanation: |
+    Two pointers start at opposite ends and move towards each other. Each pointer skips characters that are not letters or digits. When both point to real characters, compare them ignoring case. Any mismatch means the phrase is not a palindrome; if the pointers cross without a mismatch it is. This reads every character once and needs no extra string.
+  time: O(n)
+  space: O(1)
+videos: [jJXJ16kPFWg]

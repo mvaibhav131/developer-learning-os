@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which tense do you use to describe what you finished yesterday in a stand-up?"
+    options:
+      - "Past simple: I finished the login API."
+      - "Future: I will finish the login API."
+      - "Present simple: I finish the login API."
+    answer: 0
+    explanation: "Yesterday is finished, so use the past simple."
+  - kind: single
+    prompt: "What is the best way to describe a blocker?"
+    options:
+      - "Say what you need and from whom"
+      - "Say nothing and hope someone asks"
+      - "Explain the full history of the project"
+    answer: 0
+    explanation: "For example: 'I'm blocked on the API key. I need it from the client.'"
+  - kind: multiple
+    prompt: "Select all the correct sentences."
+    options:
+      - "Yesterday I worked on the API."
+      - "I have no blockers."
+      - "I have no any blockers."
+      - "Yesterday I am working on the API."
+    answer: [0, 1]
+    explanation: "Do not say 'no any'. Yesterday needs the past simple."
+  - kind: true-false
+    prompt: "In a stand-up you should talk about every detail of your work for five minutes."
+    answer: false
+    explanation: "A stand-up update is about one minute. Name the ticket, give a time and share blockers."

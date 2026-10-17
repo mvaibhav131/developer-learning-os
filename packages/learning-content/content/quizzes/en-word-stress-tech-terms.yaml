@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Where is the stress in the word 'deployment'?"
+    options:
+      - "DE-ploy-ment"
+      - "de-PLOY-ment"
+      - "de-ploy-MENT"
+    answer: 1
+    explanation: "The ending -ment does not change the stress of the verb deploy, which is stressed on the second syllable."
+  - kind: single
+    prompt: "In the noun 'RECord' the first syllable is stressed. What happens in the verb?"
+    options:
+      - "The stress moves to the second syllable: re-CORD"
+      - "The stress stays on the first syllable"
+      - "Both syllables have equal stress"
+    answer: 0
+    explanation: "Many two-syllable words stress the first syllable as nouns and the second syllable as verbs."
+  - kind: multiple
+    prompt: "Select all the words where the stress is on the second syllable."
+    options:
+      - "return"
+      - "server"
+      - "compile"
+      - "function"
+    answer: [0, 2]
+    explanation: "Return and compile are verbs stressed on the second syllable. Server and function are stressed on the first."
+  - kind: true-false
+    prompt: "In English, all syllables of a word are pronounced with the same strength."
+    answer: false
+    explanation: "One syllable is strong and the others are weaker and shorter. This is the main difference from Hindi rhythm."

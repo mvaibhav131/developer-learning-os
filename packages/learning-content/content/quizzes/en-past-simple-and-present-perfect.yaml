@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "I have seen him yesterday."
+      - "I saw him yesterday."
+      - "I have saw him yesterday."
+    answer: 1
+    explanation: "A finished time such as yesterday needs the past simple, not the present perfect."
+  - kind: single
+    prompt: "Complete the sentence: 'She has worked here ___ 2021.'"
+    options:
+      - "for"
+      - "since"
+      - "from"
+    answer: 1
+    explanation: "Use since with a starting point (2021) and for with a length of time (three years)."
+  - kind: multiple
+    prompt: "Select all the sentences that use the present perfect correctly."
+    options:
+      - "I have already sent the report."
+      - "Have you ever used Docker?"
+      - "We have released it last week."
+      - "She has finished the tests."
+    answer: [0, 1, 3]
+    explanation: "'Last week' is a finished time, so it needs the past simple: we released it last week."
+  - kind: true-false
+    prompt: "The past participle of 'write' is 'wrote'."
+    answer: false
+    explanation: "Write, wrote, written. 'Wrote' is the past simple and 'written' is the past participle."

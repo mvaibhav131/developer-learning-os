@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "In Container With Most Water, which pointer should you move?"
+    options:
+      - "The pointer at the taller wall"
+      - "The pointer at the shorter wall"
+      - "Both pointers"
+    answer: 1
+    explanation: "The shorter wall limits the height. Moving the taller one can only reduce the width without increasing the height limit."
+  - kind: single
+    prompt: "In a sorted array, the sum of the two pointers is too small. What should you do?"
+    options:
+      - "Move the right pointer left"
+      - "Move the left pointer right"
+      - "Stop and return -1"
+    answer: 1
+    explanation: "A bigger left value is the only way to increase the sum, since the right value is already the largest still available."
+  - kind: multiple
+    prompt: "Which problems are good fits for opposite-ends two pointers?"
+    options:
+      - "Valid Palindrome"
+      - "Two Sum II on a sorted array"
+      - "Counting subarrays with sum k when negative numbers exist"
+      - "3Sum after sorting"
+    answer: [0, 1, 3]
+    explanation: "Counting subarrays with negative numbers needs prefix sums and a hash map, not two pointers."
+  - kind: true-false
+    prompt: "In 3Sum you must skip repeated values, or the result can contain duplicate triplets."
+    answer: true
+    explanation: "Skip equal first elements and equal values after recording a triplet."

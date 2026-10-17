@@ -1,0 +1,57 @@
+slug: binary-search
+title: Binary Search
+difficulty: easy
+topics: [arrays, binary-search]
+lesson: binary-search-basics
+function: search
+statement: |
+  Given an array of integers `nums` sorted in **ascending** order and an integer `target`, return the index of `target` if it exists in `nums`, or `-1` if it does not.
+
+  You must write an algorithm with `O(log n)` runtime complexity.
+constraints: |
+  - `1 <= nums.length <= 10^4`
+  - `-10^4 < nums[i], target < 10^4`
+  - All integers in `nums` are unique
+  - `nums` is sorted in ascending order
+examples:
+  - input: "nums = [-1, 0, 3, 5, 9, 12], target = 9"
+    output: "4"
+    explanation: "9 exists at index 4."
+  - input: "nums = [-1, 0, 3, 5, 9, 12], target = 2"
+    output: "-1"
+    explanation: "2 does not exist in the array."
+starter: |
+  function search(nums: number[], target: number): number {
+    return -1;
+  }
+tests:
+  - { args: [[-1, 0, 3, 5, 9, 12], 9], expected: 4 }
+  - { args: [[-1, 0, 3, 5, 9, 12], 2], expected: -1 }
+  - { args: [[5], 5], expected: 0 }
+  - { args: [[5], -5], expected: -1, hidden: true }
+  - { args: [[1, 3, 5, 7, 9, 11], 11], expected: 5, hidden: true }
+  - { args: [[1, 3, 5, 7, 9, 11], 1], expected: 0, hidden: true }
+  - { args: [[2, 4, 6, 8], 8], expected: 3, hidden: true }
+  - { args: [[2, 4, 6, 8], 5], expected: -1, hidden: true }
+hints:
+  - "A linear scan is O(n). Use the fact that the array is sorted."
+  - "Keep the range `[left, right]` that can still contain the target. Look at the middle element."
+  - "If the middle is smaller than the target, the target must be on the right: `left = mid + 1`. If larger, `right = mid - 1`. Stop when `left > right`."
+solution:
+  code: |
+    function search(nums: number[], target: number): number {
+      let left = 0;
+      let right = nums.length - 1;
+      while (left <= right) {
+        const mid = left + Math.floor((right - left) / 2);
+        if (nums[mid] === target) return mid;
+        if (nums[mid] < target) left = mid + 1;
+        else right = mid - 1;
+      }
+      return -1;
+    }
+  explanation: |
+    Each comparison with the middle element lets you discard half of the remaining range, so the search finishes in about log2(n) steps. The loop keeps the invariant that the target, if present, lies inside `[left, right]`. Computing `mid` as `left + floor((right - left) / 2)` avoids integer overflow in languages with fixed-width integers.
+  time: O(log n)
+  space: O(1)
+videos: [s4DPM8ct1pI, MHf6awe89xw]

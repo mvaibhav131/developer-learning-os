@@ -1,0 +1,49 @@
+{
+  "name": "@dlos/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Express + SQLite (Drizzle ORM) API for Developer Learning OS.",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx watch --clear-screen=false src/server.ts",
+    "build": "tsup",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "cross-env NODE_ENV=test vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/core/db/cli/migrate.ts",
+    "db:seed": "tsx src/core/db/cli/seed.ts",
+    "db:reset": "tsx src/core/db/cli/reset.ts",
+    "db:backup": "tsx src/core/db/cli/backup.ts"
+  },
+  "dependencies": {
+    "@dlos/learning-content": "workspace:*",
+    "@dlos/shared": "workspace:*",
+    "better-sqlite3": "12.11.1",
+    "cors": "^2.8.6",
+    "drizzle-orm": "^0.45.4",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pino": "^10.4.0",
+    "pino-http": "^11.0.0",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "catalog:",
+    "@types/supertest": "^7.2.1",
+    "@types/swagger-ui-express": "^4.1.8",
+    "cross-env": "^10.1.0",
+    "drizzle-kit": "^0.31.11",
+    "pino-pretty": "^13.2.0",
+    "supertest": "^7.3.1",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

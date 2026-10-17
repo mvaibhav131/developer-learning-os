@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the best way to make sure you understood an instruction?"
+    options:
+      - "Say 'yes yes' and guess later"
+      - "Repeat the message in your own words and ask if it is right"
+      - "Stay silent and ask nobody"
+    answer: 1
+    explanation: "Confirming in your own words finds misunderstandings early, before they become mistakes."
+  - kind: single
+    prompt: "Which phrase politely asks someone to repeat?"
+    options:
+      - "Say again."
+      - "What?"
+      - "Sorry, could you say that again, please?"
+    answer: 2
+    explanation: "Sorry, could you say that again, please? is clear and polite."
+  - kind: multiple
+    prompt: "Select all the phrases that help you ask for an example or more detail."
+    options:
+      - "Could you give me an example?"
+      - "Could you walk me through the steps?"
+      - "I know everything."
+      - "What does this term mean here?"
+    answer: [0, 1, 3]
+    explanation: "These phrases ask for an example, a step-by-step explanation or a meaning."
+  - kind: true-false
+    prompt: "Asking for clarification shows that you are not a good engineer."
+    answer: false
+    explanation: "Careful engineers ask questions to avoid mistakes. Asking early saves time."

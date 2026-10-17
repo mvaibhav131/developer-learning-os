@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence is correct for something happening right now?"
+    options:
+      - "I debug the login flow right now."
+      - "I am debugging the login flow right now."
+      - "I debugging the login flow right now."
+    answer: 1
+    explanation: "An action happening now uses the present continuous: am, is or are plus the -ing form."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "She work in Pune."
+      - "She works in Pune."
+      - "She is work in Pune."
+    answer: 1
+    explanation: "In the present simple, add -s to the verb for he, she and it."
+  - kind: multiple
+    prompt: "Select all the correct sentences."
+    options:
+      - "I understand the task."
+      - "I am understanding the task."
+      - "We need more time."
+      - "We are needing more time."
+    answer: [0, 2]
+    explanation: "Understand and need are stative verbs. They normally use the present simple, not the -ing form."
+  - kind: true-false
+    prompt: "'We have a stand-up every morning' uses the present simple because it is a regular habit."
+    answer: true
+    explanation: "Habits, routines and schedules use the present simple."

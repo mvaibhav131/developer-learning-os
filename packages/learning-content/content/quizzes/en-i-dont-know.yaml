@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the best response when you do not know the answer?"
+    options:
+      - "Invent an answer with confidence"
+      - "Stay silent for a minute"
+      - "Be honest, share what you know and say how you would find out"
+    answer: 2
+    explanation: "Honesty with related knowledge and a learning plan shows maturity."
+  - kind: single
+    prompt: "In a coding interview, what should you do first when you are given a problem?"
+    options:
+      - "Start typing the final answer immediately"
+      - "Ask clarifying questions and think aloud"
+      - "Say that the question is wrong"
+    answer: 1
+    explanation: "Clarify the input and think aloud. Interviewers want to see your reasoning."
+  - kind: multiple
+    prompt: "Select all the helpful phrases when you are unsure."
+    options:
+      - "I haven't worked with that directly, but I know something similar."
+      - "Could you give me a small hint?"
+      - "That's not in my syllabus."
+      - "Let me think aloud, and please correct me if I'm wrong."
+    answer: [0, 1, 3]
+    explanation: "Avoid blaming the syllabus. The other phrases are honest and active."
+  - kind: true-false
+    prompt: "A confident wrong answer is usually better than saying 'I'm not sure'."
+    answer: false
+    explanation: "Interviewers value honesty. A confident wrong answer can damage trust."

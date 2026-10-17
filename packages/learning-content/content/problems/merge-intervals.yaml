@@ -1,0 +1,54 @@
+slug: merge-intervals
+title: Merge Intervals
+difficulty: medium
+topics: [arrays, sorting, intervals]
+lesson: sorting-algorithms-and-patterns
+function: merge
+statement: |
+  Given an array of `intervals` where `intervals[i] = [start, end]`, merge all **overlapping** intervals and return an array of the non-overlapping intervals that cover all the input, **sorted by start**.
+
+  Two intervals overlap when one starts before or at the point where the other ends. For example `[1, 4]` and `[4, 5]` overlap and merge into `[1, 5]`.
+constraints: |
+  - `1 <= intervals.length <= 10^4`
+  - `intervals[i].length == 2`
+  - `0 <= start <= end <= 10^4`
+examples:
+  - input: "intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]"
+    output: "[[1, 6], [8, 10], [15, 18]]"
+    explanation: "[1, 3] and [2, 6] overlap, so they become [1, 6]."
+  - input: "intervals = [[1, 4], [4, 5]]"
+    output: "[[1, 5]]"
+    explanation: "Intervals that touch at a point are treated as overlapping."
+starter: |
+  function merge(intervals: number[][]): number[][] {
+    return [];
+  }
+tests:
+  - { args: [[[1, 3], [2, 6], [8, 10], [15, 18]]], expected: [[1, 6], [8, 10], [15, 18]] }
+  - { args: [[[1, 4], [4, 5]]], expected: [[1, 5]] }
+  - { args: [[[1, 4], [0, 4]]], expected: [[0, 4]] }
+  - { args: [[[1, 4], [2, 3]]], expected: [[1, 4]], hidden: true }
+  - { args: [[[1, 10], [2, 3], [4, 5], [6, 7]]], expected: [[1, 10]], hidden: true }
+  - { args: [[[2, 3], [4, 5], [6, 7], [8, 9], [1, 10]]], expected: [[1, 10]], hidden: true }
+  - { args: [[[5, 6], [1, 2]]], expected: [[1, 2], [5, 6]], hidden: true }
+  - { args: [[[1, 4], [0, 0]]], expected: [[0, 0], [1, 4]], hidden: true }
+hints:
+  - "If the intervals are not in order, overlaps are hard to see. What happens after you sort by start?"
+  - "After sorting by start, an interval can only overlap the LAST interval in your result."
+  - "If `start <= last.end`, extend the last interval: `last.end = max(last.end, end)`. Otherwise push a new interval."
+solution:
+  code: |
+    function merge(intervals: number[][]): number[][] {
+      const sorted = intervals.map(([start, end]) => [start, end]).sort((a, b) => a[0] - b[0]);
+      const merged: number[][] = [];
+      for (const [start, end] of sorted) {
+        const last = merged[merged.length - 1];
+        if (last && start <= last[1]) last[1] = Math.max(last[1], end);
+        else merged.push([start, end]);
+      }
+      return merged;
+    }
+  explanation: |
+    Sorting by start places overlapping intervals next to each other. Then a single pass compares each interval with the most recently merged one: if it starts before that one ends, extend the end (keeping the larger end); otherwise it begins a new merged interval. Sorting dominates the cost.
+  time: O(n log n)
+  space: O(n)

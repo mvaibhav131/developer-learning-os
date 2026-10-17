@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "When the window slides to index i with size k, which element leaves the window?"
+    options:
+      - "nums[i - k]"
+      - "nums[i + k]"
+      - "nums[i - k + 1]"
+    answer: 0
+    explanation: "The window covers i - k + 1 to i. After adding nums[i], the element nums[i - k] is the one that falls out."
+  - kind: single
+    prompt: "What is the time complexity of the sliding window solution compared with recomputing every window?"
+    options:
+      - "O(n) instead of O(n * k)"
+      - "O(n^2) instead of O(n)"
+      - "O(log n) instead of O(n)"
+    answer: 0
+    explanation: "Each element enters and leaves the window once, so the scan is linear."
+  - kind: multiple
+    prompt: "Which phrases in a problem suggest a fixed-size window?"
+    options:
+      - "subarray of size k"
+      - "maximum sum of k consecutive elements"
+      - "the shortest subarray with sum at least target"
+      - "every block of length k"
+    answer: [0, 1, 3]
+    explanation: "The shortest subarray with a condition has no fixed size, so it needs a variable window."
+  - kind: true-false
+    prompt: "To find the maximum average of k elements you can maximize the sum and divide by k at the end."
+    answer: true
+    explanation: "k is the same for every window, so the largest sum has the largest average."

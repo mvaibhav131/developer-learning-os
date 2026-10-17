@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does 'the ball is in your court' mean?"
+    options:
+      - "It is your turn to act or decide"
+      - "We are playing a game"
+      - "The meeting is cancelled"
+    answer: 0
+    explanation: "The phrase comes from tennis. It means the next move is yours."
+  - kind: single
+    prompt: "What does 'low-hanging fruit' mean in a project?"
+    options:
+      - "Tasks that are easy and give good results"
+      - "Free snacks in the office"
+      - "Very difficult tasks"
+    answer: 0
+    explanation: "Low-hanging fruit is easy to reach, so it means easy tasks with a good return."
+  - kind: multiple
+    prompt: "Select all the idioms that mean something is difficult or goes wrong."
+    options:
+      - "back to square one"
+      - "hit a wall"
+      - "a piece of cake"
+      - "tip of the iceberg"
+    answer: [0, 1, 3]
+    explanation: "A piece of cake means very easy. The others are about problems."
+  - kind: true-false
+    prompt: "You should use as many idioms as possible in every email to sound fluent."
+    answer: false
+    explanation: "Understand many idioms, but use only a few that you know well, and in the right context."

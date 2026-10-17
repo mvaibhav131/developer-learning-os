@@ -1,0 +1,57 @@
+slug: reverse-linked-list
+title: Reverse Linked List
+difficulty: easy
+topics: [linked-list, pointers]
+lesson: linked-list-patterns
+function: reverseList
+args: [list]
+returns: list
+statement: |
+  Given the `head` of a singly linked list, reverse the list and return the **new head**.
+
+  In the editor, `ListNode` is already defined for you: each node has a numeric `val` and a `next` pointer to the following node (or `null` at the end). The tests build the list from an array and compare the list you return with the expected values.
+constraints: |
+  - The number of nodes is in the range `[0, 5000]`
+  - `-5000 <= Node.val <= 5000`
+examples:
+  - input: "head = [1, 2, 3, 4, 5]"
+    output: "[5, 4, 3, 2, 1]"
+  - input: "head = [1, 2]"
+    output: "[2, 1]"
+  - input: "head = []"
+    output: "[]"
+starter: |
+  // ListNode is provided: { val: number; next: ListNode | null }
+  function reverseList(head: ListNode | null): ListNode | null {
+    return head;
+  }
+tests:
+  - { args: [[1, 2, 3, 4, 5]], expected: [5, 4, 3, 2, 1] }
+  - { args: [[1, 2]], expected: [2, 1] }
+  - { args: [[]], expected: [] }
+  - { args: [[1]], expected: [1], hidden: true }
+  - { args: [[1, 2, 3]], expected: [3, 2, 1], hidden: true }
+  - { args: [[7, 7, 8]], expected: [8, 7, 7], hidden: true }
+  - { args: [[-1, 0, 1]], expected: [1, 0, -1], hidden: true }
+hints:
+  - "You only need to flip the direction of every `next` pointer."
+  - "Walk the list with three variables: `previous` (starts as null), `current` (starts at head) and a temporary for the next node."
+  - "At each step: save `current.next`, point `current.next` at `previous`, then move `previous` and `current` one step forward. Return `previous` at the end."
+solution:
+  code: |
+    function reverseList(head: ListNode | null): ListNode | null {
+      let previous: ListNode | null = null;
+      let current = head;
+      while (current) {
+        const next: ListNode | null = current.next;
+        current.next = previous;
+        previous = current;
+        current = next;
+      }
+      return previous;
+    }
+  explanation: |
+    Reverse the list in place by turning each node around as you walk. Before redirecting `current.next` to the previous node, save the original next node so you do not lose the rest of the list. After the loop, `previous` is the last node that was visited, which is the new head. One pass, three pointers, no extra list.
+  time: O(n)
+  space: O(1)
+videos: [gBTe7lFR3vc]

@@ -1,0 +1,57 @@
+slug: minimum-size-subarray-sum
+title: Minimum Size Subarray Sum
+difficulty: medium
+topics: [arrays, sliding-window]
+lesson: sliding-window-variable
+function: minSubArrayLen
+statement: |
+  Given an array of **positive** integers `nums` and a positive integer `target`, return the **minimal length** of a contiguous subarray whose sum is greater than or equal to `target`. If there is no such subarray, return `0`.
+constraints: |
+  - `1 <= target <= 10^9`
+  - `1 <= nums.length <= 10^5`
+  - `1 <= nums[i] <= 10^4`
+examples:
+  - input: "target = 7, nums = [2, 3, 1, 2, 4, 3]"
+    output: "2"
+    explanation: "The subarray [4, 3] has sum 7 and is the shortest."
+  - input: "target = 11, nums = [1, 1, 1, 1, 1, 1, 1, 1]"
+    output: "0"
+    explanation: "The total of all elements is 8, which is less than 11."
+starter: |
+  function minSubArrayLen(target: number, nums: number[]): number {
+    return 0;
+  }
+tests:
+  - { args: [7, [2, 3, 1, 2, 4, 3]], expected: 2 }
+  - { args: [4, [1, 4, 4]], expected: 1 }
+  - { args: [11, [1, 1, 1, 1, 1, 1, 1, 1]], expected: 0 }
+  - { args: [15, [1, 2, 3, 4, 5]], expected: 5, hidden: true }
+  - { args: [5, [2, 3, 1, 1, 1, 1, 1]], expected: 2, hidden: true }
+  - { args: [100, [50, 50]], expected: 2, hidden: true }
+  - { args: [3, [1, 1]], expected: 0, hidden: true }
+  - { args: [213, [12, 28, 83, 4, 25, 26, 25, 2, 25, 25, 25, 12]], expected: 8, hidden: true }
+hints:
+  - "All numbers are positive, so adding an element always increases the sum and removing one always decreases it."
+  - "Expand `right` and add `nums[right]` to a running sum."
+  - "While the sum is at least `target`, record the window length and then remove `nums[left]` and move `left` forward to try a shorter window."
+solution:
+  code: |
+    function minSubArrayLen(target: number, nums: number[]): number {
+      let left = 0;
+      let sum = 0;
+      let best = Infinity;
+      for (let right = 0; right < nums.length; right++) {
+        sum += nums[right];
+        while (sum >= target) {
+          best = Math.min(best, right - left + 1);
+          sum -= nums[left];
+          left++;
+        }
+      }
+      return best === Infinity ? 0 : best;
+    }
+  explanation: |
+    Because every number is positive, a window whose sum reaches the target can only be shortened by dropping elements from the left. Expand the right end until the sum is large enough, then shrink from the left while it stays large enough, recording the smallest length. Each index enters and leaves the window at most once.
+  time: O(n)
+  space: O(1)
+videos: [uqGxFk0cEdI]

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which description is right for the English sound v?"
+    options:
+      - "Lips round like oo, teeth do not touch the lip"
+      - "Top teeth touch the lower lip and you use your voice"
+      - "The tongue touches the roof of the mouth"
+    answer: 1
+    explanation: "For v, the top teeth touch the lower lip and the voice is on. The sound w uses round lips."
+  - kind: single
+    prompt: "How is the ending -ed pronounced in 'deployed'?"
+    options:
+      - "t"
+      - "d"
+      - "id"
+    answer: 1
+    explanation: "After the voiced sound at the end of deploy, -ed is pronounced d. Only words ending in t or d take id."
+  - kind: multiple
+    prompt: "Select all the words where -ed is pronounced id."
+    options:
+      - "tested"
+      - "added"
+      - "pushed"
+      - "committed"
+    answer: [0, 1, 3]
+    explanation: "After t or d the ending is id: tested, added, committed. Pushed ends with the sound t."
+  - kind: true-false
+    prompt: "To say the th in 'think' correctly, you should put the tongue lightly between the teeth and let air flow."
+    answer: true
+    explanation: "Do not block the air with the tongue. Let air pass between the tongue and the teeth."

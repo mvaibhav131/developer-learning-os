@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which title is the best for a bug report?"
+    options:
+      - "Not working"
+      - "Login fails with a 500 error when the password contains an ampersand"
+      - "Please fix urgent"
+    answer: 1
+    explanation: "A good title says what fails and under which condition."
+  - kind: single
+    prompt: "What does 'reproduce' mean in a bug report?"
+    options:
+      - "Make the problem happen again"
+      - "Copy the code"
+      - "Fix the bug"
+    answer: 0
+    explanation: "Steps to reproduce let another person see the same problem."
+  - kind: multiple
+    prompt: "Select all the parts of a good bug report."
+    options:
+      - "Steps to reproduce"
+      - "Expected and actual result"
+      - "Evidence such as a screenshot or log"
+      - "Your opinion about the developer"
+    answer: [0, 1, 2]
+    explanation: "A bug report must give facts that another person can check."
+  - kind: true-false
+    prompt: "In documentation it is better to use one term, such as 'user', for the same thing everywhere."
+    answer: true
+    explanation: "Using different words for the same thing confuses readers."

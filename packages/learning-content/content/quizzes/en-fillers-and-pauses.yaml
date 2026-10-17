@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is a better way to deal with 'um' and 'uh'?"
+    options:
+      - "Speak as fast as possible"
+      - "Take a breath and use a short pause"
+      - "Repeat the last word several times"
+    answer: 1
+    explanation: "A short, planned pause sounds calm and confident, and it gives you time to think."
+  - kind: single
+    prompt: "Which phrase helps you buy time in a meeting?"
+    options:
+      - "I do not know anything."
+      - "Let me think about that for a second."
+      - "Sorry, my English is very weak."
+    answer: 1
+    explanation: "A short phrase such as 'Let me think about that for a second' gives you time without worrying the listener."
+  - kind: multiple
+    prompt: "Select all the parts of the point-reason-example structure."
+    options:
+      - "Point"
+      - "Reason"
+      - "Apology"
+      - "Example"
+    answer: [0, 1, 3]
+    explanation: "Point, reason and example is a simple structure for answering any question."
+  - kind: true-false
+    prompt: "It is a good idea to apologise for your English at the start of every answer."
+    answer: false
+    explanation: "Over-apologising makes the listener focus on mistakes. One calm sentence is enough, then continue."

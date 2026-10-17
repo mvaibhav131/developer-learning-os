@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "A colleague asks you to explain a function. You want to ask a question about it. What is the most natural thing to say?"
+    options:
+      - "I have a doubt about this function."
+      - "I have a question about this function."
+      - "I have a revert about this function."
+    answer: 1
+    explanation: "In English, doubt means you do not believe something. A question is what you want to ask."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "I am working here since 2022."
+      - "I working here from 2022."
+      - "I have been working here since 2022."
+    answer: 2
+    explanation: "A situation that started in the past and continues now uses the present perfect (have been working) with since."
+  - kind: multiple
+    prompt: "Select all the correct sentences."
+    options:
+      - "Thanks for the feedback."
+      - "Thanks for the feedbacks."
+      - "Please discuss the plan."
+      - "Please discuss about the plan."
+    answer: [0, 2]
+    explanation: "Feedback is uncountable, and discuss does not take 'about'."
+  - kind: true-false
+    prompt: "In software, 'I will revert back' is a clear way to say you will reply soon."
+    answer: false
+    explanation: "Revert means undo in tech, like git revert. Say 'I will get back to you' instead."

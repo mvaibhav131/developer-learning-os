@@ -1,0 +1,53 @@
+slug: valid-anagram
+title: Valid Anagram
+difficulty: easy
+topics: [strings, hash-map]
+lesson: hashing-interview-patterns
+function: isAnagram
+statement: |
+  Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
+
+  An anagram uses exactly the same characters the same number of times, in any order.
+constraints: |
+  - `1 <= s.length, t.length <= 5 * 10^4`
+  - `s` and `t` contain lowercase English letters
+examples:
+  - input: 's = "anagram", t = "nagaram"'
+    output: "true"
+  - input: 's = "rat", t = "car"'
+    output: "false"
+    explanation: "The letters differ, so they cannot be rearranged into each other."
+starter: |
+  function isAnagram(s: string, t: string): boolean {
+    return false;
+  }
+tests:
+  - { args: ["anagram", "nagaram"], expected: true }
+  - { args: ["rat", "car"], expected: false }
+  - { args: ["a", "a"], expected: true }
+  - { args: ["ab", "a"], expected: false, hidden: true }
+  - { args: ["aacc", "ccac"], expected: false, hidden: true }
+  - { args: ["listen", "silent"], expected: true, hidden: true }
+  - { args: ["abcdefghijklmnopqrstuvwxyz", "zyxwvutsrqponmlkjihgfedcba"], expected: true, hidden: true }
+hints:
+  - "If the lengths differ, you can answer immediately."
+  - "Count how many times each letter appears. Two strings are anagrams exactly when their counts match."
+  - "Count the letters of s, then subtract while scanning t. A missing or exhausted letter means false."
+solution:
+  code: |
+    function isAnagram(s: string, t: string): boolean {
+      if (s.length !== t.length) return false;
+      const counts = new Map<string, number>();
+      for (const ch of s) counts.set(ch, (counts.get(ch) ?? 0) + 1);
+      for (const ch of t) {
+        const left = counts.get(ch);
+        if (!left) return false;
+        counts.set(ch, left - 1);
+      }
+      return true;
+    }
+  explanation: |
+    Equal lengths are a necessary condition. Count each character of `s`, then walk `t` and consume those counts. If a character is missing or has already been used up, the strings cannot be anagrams. Because the lengths match, consuming every count without a failure proves the multisets are equal.
+  time: O(n)
+  space: O(1)
+videos: [9UtInBqnCgA]

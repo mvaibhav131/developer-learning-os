@@ -1,0 +1,48 @@
+slug: missing-number
+title: Missing Number
+difficulty: easy
+topics: [arrays, math]
+lesson: arrays-fundamentals
+function: missingNumber
+statement: |
+  Given an array `nums` containing `n` **distinct** numbers taken from the range `[0, n]`, return the one number in that range that is missing from the array.
+constraints: |
+  - `n == nums.length`
+  - `1 <= n <= 10^4`
+  - `0 <= nums[i] <= n`
+  - All numbers in `nums` are distinct
+examples:
+  - input: "nums = [3, 0, 1]"
+    output: "2"
+    explanation: "n = 3, so the range is [0, 3]. The number 2 is missing."
+  - input: "nums = [0, 1]"
+    output: "2"
+    explanation: "n = 2, so the range is [0, 2]. The number 2 is missing."
+starter: |
+  function missingNumber(nums: number[]): number {
+    return 0;
+  }
+tests:
+  - { args: [[3, 0, 1]], expected: 2 }
+  - { args: [[0, 1]], expected: 2 }
+  - { args: [[9, 6, 4, 2, 3, 5, 7, 0, 1]], expected: 8 }
+  - { args: [[0]], expected: 1, hidden: true }
+  - { args: [[1]], expected: 0, hidden: true }
+  - { args: [[1, 2]], expected: 0, hidden: true }
+  - { args: [[0, 2, 3, 1, 5]], expected: 4, hidden: true }
+hints:
+  - "The numbers 0..n have a known total. What is the formula for the sum of the first n numbers?"
+  - "The missing number is the expected total minus the sum of what the array actually holds."
+  - "A second approach: XOR every index and every value. Pairs cancel and only the missing number is left."
+solution:
+  code: |
+    function missingNumber(nums: number[]): number {
+      const n = nums.length;
+      let expected = (n * (n + 1)) / 2;
+      for (const value of nums) expected -= value;
+      return expected;
+    }
+  explanation: |
+    The numbers 0 to n add up to n(n+1)/2. Subtract every value in the array from that total and what remains is the missing number. It needs one pass and no extra memory.
+  time: O(n)
+  space: O(1)

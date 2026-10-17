@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does [10, 9, 1].sort() return in JavaScript?"
+    options:
+      - "[1, 9, 10]"
+      - "[1, 10, 9]"
+      - "[10, 9, 1]"
+    answer: 1
+    explanation: "Without a comparator, sort compares values as strings, so '10' comes before '9'. Use (a, b) => a - b for numbers."
+  - kind: single
+    prompt: "Which operation is the most expensive on a large array?"
+    options:
+      - "arr.push(x)"
+      - "arr[i]"
+      - "arr.shift()"
+    answer: 2
+    explanation: "shift removes the first element and moves every other element one place left, which is O(n)."
+  - kind: multiple
+    prompt: "Which statements about creating a 2D grid are correct?"
+    options:
+      - "Array.from({ length: rows }, () => Array(cols).fill(0)) creates independent rows"
+      - "Array(rows).fill(Array(cols).fill(0)) creates independent rows"
+      - "Array(rows).fill(Array(cols).fill(0)) puts the same row object in every position"
+      - "Each row of a grid should be a new array"
+    answer: [0, 2, 3]
+    explanation: "fill reuses one object, so all rows would share the same array. Build each row separately."
+  - kind: true-false
+    prompt: "A return statement inside arr.forEach stops the whole loop."
+    answer: false
+    explanation: "It only leaves the callback for that element. Use a for or for...of loop when you need to exit early."

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "In the Two Sum hash-map solution, why must you look up the partner before storing the current number?"
+    options:
+      - "Storing first is slower"
+      - "Otherwise a number can pair with itself"
+      - "A Map cannot store duplicates"
+    answer: 1
+    explanation: "If you store first, target - x can match x itself, which uses the same element twice."
+  - kind: single
+    prompt: "What is a good key for grouping anagrams together?"
+    options:
+      - "The length of the word"
+      - "The sorted letters of the word"
+      - "The first letter"
+    answer: 1
+    explanation: "All rearrangements of the same letters produce the same sorted string."
+  - kind: multiple
+    prompt: "Which are common mistakes when using hash maps for Two Sum-style problems?"
+    options:
+      - "Using if (seen.get(need)) when index 0 is a valid stored value"
+      - "Storing the value before checking for its complement"
+      - "Using Map.has to test for a key"
+      - "Forgetting that object keys become strings"
+    answer: [0, 1, 3]
+    explanation: "Index 0 is falsy, so compare with undefined. Map.has is a correct way to test for a key."
+  - kind: true-false
+    prompt: "Replacing a nested loop with a hash map lookup can reduce Two Sum from O(n^2) to O(n) time."
+    answer: true
+    explanation: "Each element needs only one average O(1) lookup, at the cost of O(n) extra space."

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "In Subarray Sum Equals K, what should the map contain before the loop starts?"
+    options:
+      - "Nothing"
+      - "The entry 0 -> 1 for the empty prefix"
+      - "Every element of the array"
+    answer: 1
+    explanation: "The empty prefix has sum 0 and lets subarrays that start at index 0 be counted."
+  - kind: single
+    prompt: "Why do we look up prefix - k before inserting the current prefix into the map?"
+    options:
+      - "To save memory"
+      - "Inserting first could make a prefix match itself and count an empty subarray when k is 0"
+      - "Map lookups only work before inserts"
+    answer: 1
+    explanation: "A subarray must be non-empty, so the current prefix must not be matched with itself."
+  - kind: multiple
+    prompt: "When is a prefix sum with a hash map better than a sliding window?"
+    options:
+      - "The array contains negative numbers"
+      - "The array contains zeros"
+      - "All numbers are positive and you want the shortest subarray with sum at least target"
+      - "You need to count subarrays whose sum equals exactly k"
+    answer: [0, 1, 3]
+    explanation: "With only positive numbers and a shortest-length question, a variable window works and needs less memory."
+  - kind: true-false
+    prompt: "To find the longest subarray with a given sum you should store the first index of each prefix sum and not overwrite it."
+    answer: true
+    explanation: "The earliest index gives the longest distance to the current position."

@@ -1,0 +1,65 @@
+slug: merge-two-sorted-lists
+title: Merge Two Sorted Lists
+difficulty: easy
+topics: [linked-list, two-pointers]
+lesson: linked-list-patterns
+function: mergeTwoLists
+args: [list, list]
+returns: list
+statement: |
+  You are given the heads of two **sorted** singly linked lists, `list1` and `list2`. Merge them into one sorted list by splicing together the nodes of the two lists, and return the head of the merged list.
+
+  In the editor, `ListNode` is already defined for you: each node has a numeric `val` and a `next` pointer. The tests build the lists from arrays and compare the list you return with the expected values.
+constraints: |
+  - The number of nodes in each list is in the range `[0, 50]`
+  - `-100 <= Node.val <= 100`
+  - Both lists are sorted in non-decreasing order
+examples:
+  - input: "list1 = [1, 2, 4], list2 = [1, 3, 4]"
+    output: "[1, 1, 2, 3, 4, 4]"
+  - input: "list1 = [], list2 = []"
+    output: "[]"
+  - input: "list1 = [], list2 = [0]"
+    output: "[0]"
+starter: |
+  // ListNode is provided: { val: number; next: ListNode | null }
+  function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+    return list1;
+  }
+tests:
+  - { args: [[1, 2, 4], [1, 3, 4]], expected: [1, 1, 2, 3, 4, 4] }
+  - { args: [[], []], expected: [] }
+  - { args: [[], [0]], expected: [0] }
+  - { args: [[5], [1, 2, 3]], expected: [1, 2, 3, 5], hidden: true }
+  - { args: [[1, 3, 5], [2, 4, 6]], expected: [1, 2, 3, 4, 5, 6], hidden: true }
+  - { args: [[2], [1]], expected: [1, 2], hidden: true }
+  - { args: [[1, 1], [1, 1]], expected: [1, 1, 1, 1], hidden: true }
+  - { args: [[-3, -1], [-2, 0]], expected: [-3, -2, -1, 0], hidden: true }
+hints:
+  - "Compare the front nodes of both lists. The smaller one goes next in the result."
+  - "A dummy head node removes the special case of 'what is the first node of the result?'. Keep a `tail` pointer that always points to the last node you attached."
+  - "When one list runs out, attach the remainder of the other list in one step. Return `dummy.next`."
+solution:
+  code: |
+    function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+      const dummy = new ListNode(0);
+      let tail = dummy;
+      let a = list1;
+      let b = list2;
+      while (a && b) {
+        if (a.val <= b.val) {
+          tail.next = a;
+          a = a.next;
+        } else {
+          tail.next = b;
+          b = b.next;
+        }
+        tail = tail.next;
+      }
+      tail.next = a ?? b;
+      return dummy.next;
+    }
+  explanation: |
+    Merge like the merge step of merge sort. A dummy node gives the result list a stable starting point, and `tail` marks where the next node goes. Repeatedly attach the smaller of the two front nodes and advance that list. When either list is empty, the other already is sorted, so attach it as a whole. Existing nodes are re-linked, so no new nodes are created apart from the dummy.
+  time: O(n + m)
+  space: O(1)

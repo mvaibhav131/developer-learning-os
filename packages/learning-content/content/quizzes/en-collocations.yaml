@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which phrase is correct?"
+    options:
+      - "make a research"
+      - "do research"
+      - "take a research"
+    answer: 1
+    explanation: "We say do research. Research is uncountable and takes the verb do."
+  - kind: single
+    prompt: "Which is correct?"
+    options:
+      - "We did a meeting."
+      - "We made a meeting."
+      - "We had a meeting."
+    answer: 2
+    explanation: "We say have a meeting (or hold a meeting)."
+  - kind: multiple
+    prompt: "Select all the correct collocations."
+    options:
+      - "make a mistake"
+      - "take a break"
+      - "do a mistake"
+      - "give feedback"
+    answer: [0, 1, 3]
+    explanation: "We make mistakes, take breaks and give feedback. 'Do a mistake' is wrong."
+  - kind: true-false
+    prompt: "The best way to learn collocations is to learn the verb together with the noun."
+    answer: true
+    explanation: "Collocations are word partners. Learning them in pairs gives you natural English."

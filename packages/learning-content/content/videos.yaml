@@ -1,0 +1,1025 @@
+# Video registry. Add an entry with just id, language and topics, then run `pnpm content:videos`:
+# it asks YouTube (oEmbed) whether the video exists and may be embedded, and fills in title, author
+# and verifiedAt. Lessons and problems refer to videos by id.
+videos:
+  - id: g2o22C3CRfU
+    language: en
+    topics: [ big-o ]
+    title: Big-O Notation in 100 Seconds
+    author: Fireship
+    verifiedAt: 2026-10-17
+  - id: jOMxKsUd6e0
+    language: en
+    topics: [ big-o ]
+    title: Time and Space Complexity explained in literally 5 minutes | Big O |
+      Concepts made simple ep -1
+    author: GeeksforGeeks
+    verifiedAt: 2026-10-17
+  - id: PwKv8fOcriM
+    language: hi
+    topics: [ big-o ]
+    title: Time & Space Complexity - DSA Series by Shradha Ma'am
+    author: Apna College
+    verifiedAt: 2026-10-17
+  - id: 7dz8Iaf_weM
+    language: hi
+    topics: [ big-o ]
+    title: "L-1.3: Asymptotic Notations | Big O | Big Omega | Theta Notations | Most
+      Imp Topic Of Algorithm"
+    author: Gate Smashers
+    verifiedAt: 2026-10-17
+  - id: BLIrBThPTXc
+    language: hi
+    topics: [ arrays, javascript ]
+    title: "JavaScript Array Methods | JavaScript Tutorial in Hindi #17"
+    author: CodeWithHarry
+    verifiedAt: 2026-10-17
+  - id: QxA-KB2lKgk
+    language: hi
+    topics: [ arrays, javascript ]
+    title: "Some More JavaScript Array Methods | JavaScript Tutorial in Hindi #18"
+    author: CodeWithHarry
+    verifiedAt: 2026-10-17
+  - id: bAUMuuRH99o
+    language: hi
+    topics: [ arrays, javascript ]
+    title: "Map, Filter & Reduce in JavaScript | JavaScript Tutorial in Hindi #20"
+    author: CodeWithHarry
+    verifiedAt: 2026-10-17
+  - id: 3OamzN90kPg
+    language: en
+    topics: [ arrays, hashing ]
+    title: Contains Duplicate - Leetcode 217 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: bNvIQI2wAjk
+    language: en
+    topics: [ arrays, prefix-sum ]
+    title: Product of Array Except Self - Leetcode 238 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: 5WZl3MMT0Eg
+    language: en
+    topics: [ arrays, kadane ]
+    title: Maximum Subarray - Amazon Coding Interview Question - Leetcode 53 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: 9IZYqostl2M
+    language: hi
+    topics: [ arrays, kadane ]
+    title: Kadane's Algorithm | Maximum Subarray Sum | DSA Series by Shradha Ma'am
+    author: Apna College
+    verifiedAt: 2026-10-17
+  - id: AHZpyENo7k4
+    language: en
+    topics: [ arrays, kadane ]
+    title: Kadane's Algorithm | Maximum Subarray Sum | Finding and Printing
+    author: take U forward
+    verifiedAt: 2026-10-17
+  - id: jJXJ16kPFWg
+    language: en
+    topics: [ strings, two-pointers ]
+    title: Valid Palindrome - Leetcode 125 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: 9UtInBqnCgA
+    language: en
+    topics: [ strings, hashing ]
+    title: Valid Anagram - Leetcode 242 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: XYQecbcd6_c
+    language: en
+    topics: [ strings ]
+    title: Longest Palindromic Substring - Python - Leetcode 5
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: KEs5UyBJ39g
+    language: en
+    topics: [ hashing ]
+    title: Hashing | Maps | Time Complexity | Collisions | Division Rule of Hashing
+      | Strivers A2Z DSA Course
+    author: take U forward
+    verifiedAt: 2026-10-17
+  - id: W5q0xgxmRd8
+    language: hi
+    topics: [ hashing ]
+    title: "L-6.1: What is hashing with example | Hashing in data structure"
+    author: Gate Smashers
+    verifiedAt: 2026-10-17
+  - id: KLlXCFG5TnA
+    language: en
+    topics: [ hashing, two-sum ]
+    title: Two Sum - Leetcode 1 - HashMap - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: vzdNOK2oB2E
+    language: en
+    topics: [ hashing, anagrams ]
+    title: Group Anagrams - Categorize Strings by Count - Leetcode 49
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: YPTqKIgVk-k
+    language: en
+    topics: [ hashing, top-k ]
+    title: Top K Frequent Elements - Bucket Sort - Leetcode 347 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: B2L4mAglJZA
+    language: hi
+    topics: [ two-pointers ]
+    title: "Lec-10: Two 2️⃣ Pointer👆 Technique | Two 2️⃣ Sum Problem in Data
+      Structure"
+    author: Gate Smashers
+    verifiedAt: 2026-10-17
+  - id: QzZ7nmouLTI
+    language: en
+    topics: [ two-pointers ]
+    title: Two Pointers in 7 minutes | LeetCode Pattern
+    author: AlgoMasterIO
+    verifiedAt: 2026-10-17
+  - id: UuiTKBwPgAo
+    language: en
+    topics: [ two-pointers ]
+    title: Container with Most Water - Leetcode 11 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: jzZsG8n2R9A
+    language: en
+    topics: [ two-pointers ]
+    title: 3Sum - Leetcode 15 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: aayNRwUN3Do
+    language: en
+    topics: [ two-pointers, arrays ]
+    title: Move Zeroes - Leetcode 283 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: DEJAZBq0FDA
+    language: en
+    topics: [ two-pointers, arrays ]
+    title: Remove Duplicates from Sorted Array - Leetcode 26 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: gBTe7lFR3vc
+    language: en
+    topics: [ fast-slow, linked-list ]
+    title: Linked List Cycle - Floyd's Tortoise and Hare - Leetcode 141 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: uqGxFk0cEdI
+    language: hi
+    topics: [ sliding-window ]
+    title: "Lec-12: Sliding Window 🪟 Technique | Data Structure"
+    author: Gate Smashers
+    verifiedAt: 2026-10-17
+  - id: 1pkOgXD63yU
+    language: en
+    topics: [ sliding-window ]
+    title: "Sliding Window: Best Time to Buy and Sell Stock - Leetcode 121 - Python"
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: wiGpQwVHdE0
+    language: en
+    topics: [ sliding-window, strings ]
+    title: Longest Substring Without Repeating Characters - Leetcode 3 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: jSto0O4AJbM
+    language: en
+    topics: [ sliding-window, strings ]
+    title: Minimum Window Substring - Airbnb Interview Question - Leetcode 76
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: yuws7YK0Yng
+    language: en
+    topics: [ prefix-sum ]
+    title: Prefix Sum in 4 minutes | LeetCode Pattern
+    author: AlgoMasterIO
+    verifiedAt: 2026-10-17
+  - id: qmlrMrIObvs
+    language: hi
+    topics: [ prefix-sum ]
+    title: What is Prefix Sum ? Why It is Required ? Concept Of Prefix/Suffix Sum
+      |Hindi | Newton School
+    author: Coding Community | Newton School
+    verifiedAt: 2026-10-17
+  - id: fFVZt-6sgyo
+    language: en
+    topics: [ prefix-sum, hashing ]
+    title: Subarray Sum Equals K - Prefix Sums - Leetcode 560 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: KDH4mhFVvHw
+    language: hi
+    topics: [ prefix-sum, hashing ]
+    title: Subarray Sum Equals K | Brute-Better-Optimal approach
+    author: Apna College
+    verifiedAt: 2026-10-17
+  - id: s4DPM8ct1pI
+    language: en
+    topics: [ binary-search ]
+    title: Binary Search - Leetcode 704 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: MHf6awe89xw
+    language: en
+    topics: [ binary-search ]
+    title: BS-1. Binary Search Introduction | Real Life Example | Iterative |
+      Recursive | Overflow Cases
+    author: take U forward
+    verifiedAt: 2026-10-17
+  - id: YJeoQBevNVo
+    language: hi
+    topics: [ binary-search ]
+    title: "Lecture 12: Binary Search Explained in 1 Video [Theory + Code]"
+    author: CodeHelp - by Babbar
+    verifiedAt: 2026-10-17
+  - id: IZP_8-JZqhM
+    language: hi
+    topics: [ binary-search ]
+    title: 16 Binary Search on Answer Concept
+    author: Aditya Verma
+    verifiedAt: 2026-10-17
+  - id: U2SozAs9RzA
+    language: en
+    topics: [ binary-search ]
+    title: Koko Eating Bananas - Binary Search - Leetcode 875 - Python
+    author: NeetCode
+    verifiedAt: 2026-10-17
+  - id: tWCaFVJMUi8
+    language: hi
+    topics: [ sorting ]
+    title: "L-3.1: How Quick Sort Works | Performance of Quick Sort with Example |
+      Divide and Conquer"
+    author: Gate Smashers
+    verifiedAt: 2026-10-17
+  - id: cQDtOBTy7_Y
+    language: hi
+    topics: [ sorting ]
+    title: Merge Sort Algorithm | Recursion & Backtracking
+    author: Apna College
+    verifiedAt: 2026-10-17
+  - id: 8MNB0Mba_Dc
+    language: hi
+    topics: [ sorting ]
+    title: Quick Sort Algorithm - Lecture 51 of Complete DSA Placement Series
+    author: Shradha Khapra
+    verifiedAt: 2026-10-17
+  # English for developers
+  - {
+      id: jul2urONzOQ,
+      language: en,
+      topics: [ grammar, sentences ],
+      title: English Sentence Structure - English Grammar Lesson,
+      author: Oxford Online English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OserH3YLBgg,
+      language: en,
+      topics: [ grammar, sentences ],
+      title: "English Sentence Structure: Subject, Verb, Object (SVO) -2025.",
+      author: English Evolution Step 1,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: T7Lj93wZAz4,
+      language: hi,
+      topics: [ grammar, sentences ],
+      title: English Grammar Foundation | Parts Of Sentence | Subject Verb Object
+        Concept | Parts of Speech,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: W3HdjN3cLiM,
+      language: en,
+      topics: [ grammar, tenses ],
+      title: PRESENT SIMPLE and PRESENT CONTINUOUS | the complete grammar guide,
+      author: Arnel's Everyday English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: SL3ciyAEcms,
+      language: en,
+      topics: [ grammar, tenses ],
+      title: "Learn English Tenses: Present Simple or Present Continuous?",
+      author: Learn English with Rebecca · engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: GV9IFkjsQkE,
+      language: en,
+      topics: [ grammar, tenses ],
+      title: Present continuous or present simple? A Mini English Lesson,
+      author: British Council | English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ZqemzNVa0vk,
+      language: hi,
+      topics: [ grammar, tenses ],
+      title: English Tenses Explained in HINDI - With PDF and a Worksheet,
+      author: Aleena Rais Live,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 67TgyZQaig4,
+      language: hi,
+      topics: [ grammar, tenses ],
+      title: "All Tenses in 1 Hour || Tense in English Grammar || Present tense, Past
+        tense and Future tense",
+      author: English Connection,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 97ZgXLQxkpU,
+      language: hi,
+      topics: [ grammar, tenses ],
+      title: 5 Minutes में सीखें पूरे TENSES | TENSES IN ENGLISH GRAMMAR | NIMISHA
+        BANSAL |,
+      author: NIMISHA BANSAL,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: vM5trdispow,
+      language: en,
+      topics: [ grammar, tenses ],
+      title: PAST SIMPLE or PRESENT PERFECT? | Let's learn and compare! - English
+        Tenses,
+      author: Arnel's Everyday English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: T09u75kiKGc,
+      language: en,
+      topics: [ grammar, tenses ],
+      title: Present Perfect or Past Simple? - English Grammar lesson,
+      author: Learn English with Papa Teach Me,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: kLXhTcGnQ20,
+      language: en,
+      topics: [ grammar, future ],
+      title: ❌ STOP using the 'future tenses' in English - THIS is how we REALLY do
+        it! (Full Grammar Lesson),
+      author: English with Lucy,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: UISiuiPd_FY,
+      language: en,
+      topics: [ grammar, future ],
+      title: "Will vs Be Going To vs Present Continuous: Talk About the Future in
+        English (Jack Explains)",
+      author: To Fluency,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: BPvQuN3oo0U,
+      language: hi,
+      topics: [ grammar, articles ],
+      title: "Learn English Articles (A, An, The) in 10 minutes - Definite Indefinite
+        Articles With Examples & PDF",
+      author: Aleena Rais Live,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: RDkx4J__-QY,
+      language: en,
+      topics: [ grammar, articles ],
+      title: Articles – English Grammar Lessons,
+      author: Ellii (formerly ESL Library),
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 2hlnMQKPdE8,
+      language: hi,
+      topics: [ grammar, articles ],
+      title: Articles In English Grammar | Use of A/AN/THE | Class 10/11/12 | Full
+        Explanation,
+      author: Dear Sir,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 92XBCRYZ1S8,
+      language: en,
+      topics: [ grammar, prepositions ],
+      title: IN / ON / AT - Prepositions of PLACE AND TIME | English Grammar Lesson
+        (+ Free PDF & Quiz),
+      author: English with Lucy,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: nO3Bj3sUPQU,
+      language: hi,
+      topics: [ grammar, prepositions ],
+      title: "सभी Prepositions 15 Minutes में!  🔥 English Prepositions Masterclass |
+        IN, ON, AT की पूरी Grammar",
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: XzkbcWh8s4w,
+      language: en,
+      topics: [ grammar, prepositions ],
+      title: Prepositions of PLACE  👉  IN / ON / AT / BY  👈  Common English Grammar
+        Mistakes,
+      author: mmmEnglish,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: W1ecVwwVIVY,
+      language: hi,
+      topics: [ grammar, mistakes ],
+      title: Avoid These Common English Mistakes Made In Indian English | Learn
+        English Through Hindi | Learnex,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: VeFjw6nPD64,
+      language: en,
+      topics: [ grammar, mistakes ],
+      title: STOP 🚫 - These Common English Mistakes are Absolutely WRONG!,
+      author: English with Lucy,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: Qp_wd37HL2g,
+      language: en,
+      topics: [ grammar, mistakes ],
+      title: "10 Very Common English Grammar Mistakes You May Be Making [and how to
+        fix them!]",
+      author: English with Aga,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: MF4mDLHagSU,
+      language: en,
+      topics: [ grammar, questions ],
+      title: "“Do” Questions & Negatives – DO, DOES, DON’T, DOESN’T",
+      author: English with Ronnie · EnglishLessons4U with engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: HxXoGWzX-BY,
+      language: hi,
+      topics: [ grammar, questions ],
+      title: "Do Does & Did का सही Use , Learn English Speaking & Grammar , Kanchan
+        English Vidyaसा",
+      author: Vidya Connection,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 36wG9pSYu7Q,
+      language: en,
+      topics: [ grammar, modals ],
+      title: "MODAL VERBS: All you need to know about CAN, COULD, MAY, MIGHT, MUST,
+        SHOULD, SHALL, WILL and WOULD",
+      author: English with Lucy,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: GYV0c__gtAA,
+      language: hi,
+      topics: [ grammar, modals ],
+      title: "All Modals in One Hour। English Modals। Can, May, Should,Must, Used to।
+        Kamlesh Sir",
+      author: Mass Study,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: e8NbVrMGrh8,
+      language: en,
+      topics: [ pronunciation, v-w ],
+      title: Pronunciation - V & W,
+      author: English with Ronnie · EnglishLessons4U with engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: syboTIzBxoo,
+      language: en,
+      topics: [ pronunciation, v-w ],
+      title: "English Pronunciation Lesson: The Sounds W and V (...and F)",
+      author: Pronunciation with Emma,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 5EWrcsK3q7g,
+      language: hi,
+      topics: [ pronunciation, vowels ],
+      title: Phonetics In English - Lesson 01 - Vowel Sounds | मुश्किल से मुसकिल
+        English Word आसानी से बोल पाओगे,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 7CeNTtbhYLs,
+      language: en,
+      topics: [ pronunciation, th ],
+      title: Pronunciation of 'th' - English In A Minute,
+      author: BBC Learning English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: I7nsgRyKDXg,
+      language: en,
+      topics: [ pronunciation, th ],
+      title: How To Pronounce the 'TH' Sound - Quick and Easy Guide for English
+        Learners!,
+      author: Smashing English! Free and Fun English Lessons!,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: Vu6UVwkUgzc,
+      language: en,
+      topics: [ pronunciation, word-stress ],
+      title: Syllables and Word Stress - English Pronunciation Lesson,
+      author: Oxford Online English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: zWnZia9V9TA,
+      language: hi,
+      topics: [ pronunciation, word-stress ],
+      title: Syllable & Word Stress In English Pronunciation 🗣 सही Pronunciation के
+        Rules | Speak Fluently,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: hRJm8ulfAWs,
+      language: en,
+      topics: [ pronunciation, word-stress ],
+      title: WORD STRESS in English - What are the rules for Word Stress in English?,
+      author: Pronunciation with Emma,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: _P7_69FeqnU,
+      language: en,
+      topics: [ pronunciation, intonation ],
+      title: Sentence Stress and Intonation in English (The Complete Guide),
+      author: Pronunciation with Emma,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: rnJCKda4oWU,
+      language: en,
+      topics: [ pronunciation, sentence-stress ],
+      title: Sentence Stress in English Pronunciation,
+      author: Oxford Online English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: H2naE8bAxeM,
+      language: en,
+      topics: [ pronunciation, rhythm ],
+      title: Rhythm in English Speaking (How People Really Speak English),
+      author: Speak English With Rupert,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ljEP_ywBm7I,
+      language: en,
+      topics: [ fluency, shadowing ],
+      title: "Shadowing Technique in English: are you wasting your time?",
+      author: Accent's Way English with Hadar,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: MrrxN6GZJaU,
+      language: en,
+      topics: [ fluency, shadowing ],
+      title: Shadowing English Speaking Practice | Learn English with Podcast | Daily
+        Conversation for Beginners,
+      author: "English Unleashed: The Podcast",
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: PCWh1I7ri_g,
+      language: hi,
+      topics: [ fluency, thinking ],
+      title: How To Think In English | 3 Tricks To Speak Fluent English Without
+        Translating | in Hindi,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: gs213ewclT0,
+      language: hi,
+      topics: [ fluency, thinking ],
+      title: English में सोचना सीखो 🔥| How to Think in English | Secret English to
+        Fluency  | Kanchan Keshari,
+      author: English Connection,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ko9OGHeGNsg,
+      language: en,
+      topics: [ fluency, thinking ],
+      title: How to Stop Translating in Your Head,
+      author: Learn English with Bob the Canadian,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: hUY8DiQgUUg,
+      language: en,
+      topics: [ fluency, fillers ],
+      title: How to Avoid Filler Words,
+      author: Alexander Lyon Communication Coach,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: W995352_kkw,
+      language: en,
+      topics: [ fluency, fillers ],
+      title: 'How to Stop Saying "Um", "Like", and "You Know"',
+      author: The Distilled Man,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: szoPFcVl2KU,
+      language: en,
+      topics: [ fluency, routine ],
+      title: How to Practice English Alone Every Day (Only 15 Minutes!),
+      author: Speak English with J & May,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: mr618l8kMDA,
+      language: en,
+      topics: [ fluency, routine ],
+      title: How to Practice English Alone (15 Minutes a Day),
+      author: Daily English Boost,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: MsxcpZr1LpM,
+      language: en,
+      topics: [ workplace, standup ],
+      title: "English for Developers: Real Daily Stand-up Meeting | Listening
+        Practice",
+      author: EnglishNotNull,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: PLhAzAymMsY,
+      language: en,
+      topics: [ workplace, meetings ],
+      title: 40 English Phrases You Need for Online Meetings,
+      author: Maria Sheeran,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: O3kg_dWkmCA,
+      language: en,
+      topics: [ workplace, meetings ],
+      title: 40 Essential Phrases To Host A Meeting in English,
+      author: mmmEnglish,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ENCnqouZgyQ,
+      language: en,
+      topics: [ workplace, clarification ],
+      title: "Business English - 925 English Lesson 24: Asking for Clarification |
+        Clarifying in English",
+      author: Business English - Learn with Business English Pod,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: XlmKqkZkfqI,
+      language: en,
+      topics: [ workplace, explaining ],
+      title: The Best Professional Connectors to Explain Your Opinions in English,
+      author: Speak Confident English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OvWDWx8Rshw,
+      language: en,
+      topics: [ workplace, disagreeing ],
+      title: How to disagree politely in English,
+      author: Learn English with Rebecca · engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: F5h3tLtgVrI,
+      language: en,
+      topics: [ workplace, disagreeing ],
+      title: Disagreeing - 10 - English at Work gives you the language to disagree,
+      author: BBC Learning English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: L0wye4RzMJk,
+      language: en,
+      topics: [ workplace, small-talk ],
+      title: Successful English Small Talk at Work | English Conversation Practice,
+      author: Speak Confident English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 2bodeNQNkrQ,
+      language: en,
+      topics: [ workplace, small-talk ],
+      title: Small Talk in the Workplace 💼 Start a Conversation with Coworkers and
+        Colleagues in American English,
+      author: English with Kim,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 3Tu1jN65slw,
+      language: en,
+      topics: [ writing, email ],
+      title: How to write professional emails in English,
+      author: English with Alex · engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: VE9wAMP3jWo,
+      language: hi,
+      topics: [ writing, email ],
+      title: 5 Steps - How To Write A Perfect Email? Tips For Effective Communication
+        & Email Writing Skills,
+      author: Learnex - English lessons through Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: moIucWGgvMc,
+      language: en,
+      topics: [ writing, email ],
+      title: Write Professional Emails in English | Step-by-Step,
+      author: Speak Confident English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 1XctnF7C74s,
+      language: en,
+      topics: [ writing, email, chat ],
+      title: 8 Email Etiquette Tips - How to Write Better Emails at Work,
+      author: Harvard Business Review,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OJqUWvmf4gg,
+      language: en,
+      topics: [ writing, commits ],
+      title: Write git commit messages like a PRO with Conventional Commits,
+      author: Justin Brooks,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: e3bjQX9jIBk,
+      language: en,
+      topics: [ writing, pull-requests ],
+      title: "Git Github Tutorial 10: What is Pull Request?",
+      author: codebasics,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: GYy9g3XSSG0,
+      language: en,
+      topics: [ writing, bug-reports ],
+      title: How to Write an Effective Bug Report with Example in JIRA.,
+      author: The Testing Academy,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OWAZ0hRmKTg,
+      language: hi,
+      topics: [ writing, bug-reports ],
+      title: Bug Report कैसे करे  JIRA Mein |  JIRA Bug Report with Template,
+      author: TheTestingAcademy Hindi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: L7Ry-Fiij-M,
+      language: en,
+      topics: [ writing, documentation ],
+      title: How to Document Your Code Like a Pro,
+      author: ArjanCodes,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: vPqx7tuClN4,
+      language: en,
+      topics: [ writing, follow-up ],
+      title: How to Write a Polite Reminder Email | Part 1 | Write Better in English,
+      author: Worldwide Speak,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: cAS8DUDcFVs,
+      language: en,
+      topics: [ writing, polite-requests ],
+      title: Email | How to ask for something POLITELY | 2021,
+      author: Worldwide Speak,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OLVUrgQ_BbA,
+      language: hi,
+      topics: [ interview, introduction ],
+      title: Tell Me About Yourself | How to Introduce Yourself in Interviews? Best
+        Answer,
+      author: Apna College,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: XNAIDss2Slc,
+      language: en,
+      topics: [ interview, introduction ],
+      title: "Ex-Google Recruiter Explains: How to Answer “Tell Me About Yourself”
+        (Step-by-Step)",
+      author: Farah Sharghi,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: aJdA4eD7rkA,
+      language: en,
+      topics: [ interview, introduction ],
+      title: "How To Introduce Yourself as a Software Engineer: Tell Me About
+        Yourself!",
+      author: Leonard Thiele,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: PG4t_6qjxz0,
+      language: en,
+      topics: [ interview, projects ],
+      title: Best way to Answer DSA Questions and Explain Projects | Product Based
+        Companies,
+      author: Striver,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ld0cvWnrVsU,
+      language: en,
+      topics: [ interview, behavioural ],
+      title: Cracking the Behavioral Interview for Software Developers,
+      author: Keep On Coding,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: uQEuo7woEEk,
+      language: en,
+      topics: [ interview, star ],
+      title: STAR INTERVIEW QUESTIONS & ANSWERS! (The STAR TECHNIQUE for Behavioural
+        Interview Questions!),
+      author: CareerVidz,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: UQrTMxouDUY,
+      language: en,
+      topics: [ interview, star ],
+      title: STAR Method - How to Ace Your Amazon Interview,
+      author: Inside Amazon,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 3PCE7GalxJU,
+      language: en,
+      topics: [ interview, dont-know ],
+      title: “WHAT TO SAY when you cannot ANSWER an INTERVIEW QUESTION!”,
+      author: CareerVidz,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 2cXmvZRtG0s,
+      language: en,
+      topics: [ interview, dont-know ],
+      title: 5 Ways to Respond to a Job Interview Question (When You Don't Know the
+        Answer),
+      author: Speak Confident English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: A7KiuI_GMMY,
+      language: en,
+      topics: [ interview, salary ],
+      title: How to NEGOTIATE your salary in an interview | For Freshers &
+        Experienced Professional,
+      author: Diksha Arora - Interview Coach,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: vLbrwSzXUro,
+      language: hi,
+      topics: [ interview, salary ],
+      title: Salary NEGOTIATION Guide For FRESHERS | Warikoo Careers Hindi,
+      author: warikoo careers,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 8LwveoDO_M8,
+      language: en,
+      topics: [ interview, questions ],
+      title: Questions to ask at the End of an Interview,
+      author: Life Work Balance,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: OvvTD5rtnNA,
+      language: en,
+      topics: [ interview, questions ],
+      title: Questions to Ask at the End of an Interview | Job Interview Tips (from
+        former CEO),
+      author: The Companies Expert,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 4R9JGUu4Phk,
+      language: en,
+      topics: [ vocabulary, phrasal-verbs ],
+      title: "English at Work: 10 Phrasal Verbs for the Office",
+      author: English with Alex · engVid,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: ZrQJaLemaoE,
+      language: en,
+      topics: [ vocabulary, phrasal-verbs ],
+      title: "12 Phrasal Verbs You Can Use At Work: An English Lesson",
+      author: Learn English with Bob the Canadian,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: Uxk9CbwW-7Y,
+      language: en,
+      topics: [ vocabulary, collocations ],
+      title: 225 Useful Collocations You MUST Know | 1-Hour Vocabulary Masterclass,
+      author: Interactive English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 0T3_divL9vk,
+      language: en,
+      topics: [ vocabulary, idioms ],
+      title: Let’s TOUCH BASE! 15 English idioms to use at work,
+      author: mmmEnglish,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: hRA0cS2Xqck,
+      language: en,
+      topics: [ vocabulary, idioms ],
+      title: Learn 8 English Idioms You Can Use At Work! 🧑‍💼🔨,
+      author: Learn English with Bob the Canadian,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: uDVoZ39mONk,
+      language: en,
+      topics: [ listening ],
+      title: The Easiest Way to Improve Your English Listening Skills,
+      author: EngFluent,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: nMC16FZhsUM,
+      language: en,
+      topics: [ listening ],
+      title: ONE thing that will improve your English Listening Skills,
+      author: English Speaking Success,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 7yH03HFazXM,
+      language: en,
+      topics: [ listening, accents ],
+      title: "If you understand these 10 accents, your English is amazing!",
+      author: POC English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: wSYMMkLgno4,
+      language: en,
+      topics: [ listening, accents ],
+      title: "English Accents: How Different Countries Speak English",
+      author: POC English,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: 27Ethdd1yu4,
+      language: hi,
+      topics: [ habit, speaking ],
+      title: 5 Easy Steps To Speak In ENGLISH Fluently And Confidently | English
+        Speaking Tricks | BeerBiceps,
+      author: BeerBiceps,
+      verifiedAt: 2026-10-17
+    }
+  - {
+      id: p6Xg6Yzx97s,
+      language: en,
+      topics: [ habit ],
+      title: "How to make English a daily habit ",
+      author: Polygloteen,
+      verifiedAt: 2026-10-17
+    }

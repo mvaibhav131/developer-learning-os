@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which request is the most polite?"
+    options:
+      - "Give me the logs."
+      - "Can you send the logs?"
+      - "Would it be possible to get the logs today?"
+    answer: 2
+    explanation: "Would it be possible is the most polite and formal form. Could you is also polite. A direct command is not."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "She cans code."
+      - "She can codes."
+      - "She can code."
+    answer: 2
+    explanation: "After a modal verb the main verb stays in the base form and the modal never takes -s."
+  - kind: multiple
+    prompt: "Select all the sentences that are correct."
+    options:
+      - "You should test it."
+      - "You should to test it."
+      - "You don't have to attend the demo."
+      - "I can able to join."
+    answer: [0, 2]
+    explanation: "No 'to' after should, and 'can able to' is wrong. Say I can join or I am able to join."
+  - kind: true-false
+    prompt: "'You mustn't share customer data' and 'You don't have to share customer data' mean the same thing."
+    answer: false
+    explanation: "Mustn't means it is forbidden. Don't have to means it is not necessary."

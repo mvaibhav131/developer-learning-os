@@ -1,0 +1,57 @@
+slug: longest-substring-without-repeating-characters
+title: Longest Substring Without Repeating Characters
+difficulty: medium
+topics: [strings, sliding-window, hash-map]
+lesson: sliding-window-variable
+function: lengthOfLongestSubstring
+statement: |
+  Given a string `s`, return the **length** of the longest substring that contains no repeated characters.
+constraints: |
+  - `0 <= s.length <= 5 * 10^4`
+  - `s` consists of English letters, digits, symbols and spaces
+examples:
+  - input: 's = "abcabcbb"'
+    output: "3"
+    explanation: 'The longest substring without repeats is "abc".'
+  - input: 's = "bbbbb"'
+    output: "1"
+  - input: 's = "pwwkew"'
+    output: "3"
+    explanation: 'The answer is "wke". Note that "pwke" is a subsequence, not a substring.'
+starter: |
+  function lengthOfLongestSubstring(s: string): number {
+    return 0;
+  }
+tests:
+  - { args: ["abcabcbb"], expected: 3 }
+  - { args: ["bbbbb"], expected: 1 }
+  - { args: ["pwwkew"], expected: 3 }
+  - { args: [""], expected: 0, hidden: true }
+  - { args: [" "], expected: 1, hidden: true }
+  - { args: ["au"], expected: 2, hidden: true }
+  - { args: ["dvdf"], expected: 3, hidden: true }
+  - { args: ["abba"], expected: 2, hidden: true }
+  - { args: ["tmmzuxt"], expected: 5, hidden: true }
+hints:
+  - "Checking every substring is O(n^3) or O(n^2). A window that only moves forward is enough."
+  - "Grow the window by moving `right`. Keep a Map from character to the last index where you saw it."
+  - "When the new character was already inside the window, move `left` to just after its previous position. Never move `left` backwards."
+solution:
+  code: |
+    function lengthOfLongestSubstring(s: string): number {
+      const lastSeen = new Map<string, number>();
+      let left = 0;
+      let best = 0;
+      for (let right = 0; right < s.length; right++) {
+        const previous = lastSeen.get(s[right]);
+        if (previous !== undefined && previous >= left) left = previous + 1;
+        lastSeen.set(s[right], right);
+        best = Math.max(best, right - left + 1);
+      }
+      return best;
+    }
+  explanation: |
+    The window `[left, right]` always holds distinct characters. When the character at `right` already appears inside the window, jump `left` to one position after its previous occurrence, which removes the duplicate in one move. Record the latest index of every character and track the largest window size. Each index is visited once.
+  time: O(n)
+  space: O(min(n, alphabet size))
+videos: [wiGpQwVHdE0]

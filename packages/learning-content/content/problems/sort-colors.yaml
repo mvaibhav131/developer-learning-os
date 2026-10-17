@@ -1,0 +1,59 @@
+slug: sort-colors
+title: Sort Colors
+difficulty: medium
+topics: [arrays, two-pointers, sorting, in-place]
+lesson: sorting-algorithms-and-patterns
+function: sortColors
+inPlace: true
+statement: |
+  An array `nums` contains `n` objects coloured red, white or blue, represented by the integers `0`, `1` and `2`. Sort them **in place** so that objects of the same colour are adjacent, in the order red (0), white (1), blue (2).
+
+  Do not use a library sort. Solve it in **one pass** with constant extra space. Do not return anything: the grader checks the array you modified.
+constraints: |
+  - `1 <= nums.length <= 300`
+  - `nums[i]` is `0`, `1` or `2`
+examples:
+  - input: "nums = [2, 0, 2, 1, 1, 0]"
+    output: "[0, 0, 1, 1, 2, 2]"
+  - input: "nums = [2, 0, 1]"
+    output: "[0, 1, 2]"
+starter: |
+  function sortColors(nums: number[]): void {
+    // Rearrange `nums` itself. Nothing needs to be returned.
+  }
+tests:
+  - { args: [[2, 0, 2, 1, 1, 0]], expected: [0, 0, 1, 1, 2, 2] }
+  - { args: [[2, 0, 1]], expected: [0, 1, 2] }
+  - { args: [[0]], expected: [0] }
+  - { args: [[1, 2, 0]], expected: [0, 1, 2], hidden: true }
+  - { args: [[1, 1, 1]], expected: [1, 1, 1], hidden: true }
+  - { args: [[2, 2, 0, 0, 1, 1]], expected: [0, 0, 1, 1, 2, 2], hidden: true }
+  - { args: [[2, 1, 0]], expected: [0, 1, 2], hidden: true }
+  - { args: [[0, 2, 1, 0, 2, 1, 0]], expected: [0, 0, 0, 1, 1, 2, 2], hidden: true }
+hints:
+  - "Counting the zeros, ones and twos and then rewriting the array works in two passes. Can you do it in one?"
+  - "Keep three zones: everything before `low` is 0, everything after `high` is 2, and `mid` scans the unknown middle."
+  - "If `nums[mid]` is 0, swap it with `low` and advance both. If it is 2, swap it with `high` and shrink `high` (do not advance `mid`). If it is 1, just advance `mid`."
+solution:
+  code: |
+    function sortColors(nums: number[]): void {
+      let low = 0;
+      let mid = 0;
+      let high = nums.length - 1;
+      while (mid <= high) {
+        if (nums[mid] === 0) {
+          [nums[low], nums[mid]] = [nums[mid], nums[low]];
+          low++;
+          mid++;
+        } else if (nums[mid] === 2) {
+          [nums[mid], nums[high]] = [nums[high], nums[mid]];
+          high--;
+        } else {
+          mid++;
+        }
+      }
+    }
+  explanation: |
+    This is the Dutch national flag algorithm. Maintain three regions: zeros before `low`, twos after `high`, and ones between `low` and `mid`. Examine `nums[mid]`: a 0 is swapped to the front region, a 2 is swapped to the back region (and the swapped-in value must be looked at again, so `mid` stays), and a 1 is already in the right place. Every element is handled once, so one pass is enough.
+  time: O(n)
+  space: O(1)

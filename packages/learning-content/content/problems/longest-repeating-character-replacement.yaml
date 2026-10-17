@@ -1,0 +1,60 @@
+slug: longest-repeating-character-replacement
+title: Longest Repeating Character Replacement
+difficulty: medium
+topics: [strings, sliding-window]
+lesson: sliding-window-variable
+function: characterReplacement
+statement: |
+  You are given a string `s` of uppercase English letters and an integer `k`. In one operation you may change **any** character of the string to any other uppercase letter. You can do this at most `k` times.
+
+  Return the length of the **longest substring that contains only one repeated letter** after performing at most `k` operations.
+constraints: |
+  - `1 <= s.length <= 10^5`
+  - `s` consists of uppercase English letters
+  - `0 <= k <= s.length`
+examples:
+  - input: 's = "ABAB", k = 2'
+    output: "4"
+    explanation: 'Replace the two "A" with "B" (or the two "B" with "A") to get "BBBB".'
+  - input: 's = "AABABBA", k = 1'
+    output: "4"
+    explanation: 'Replace the one "A" in the middle to get "AABBBBA". The substring "BBBB" has length 4.'
+starter: |
+  function characterReplacement(s: string, k: number): number {
+    return 0;
+  }
+tests:
+  - { args: ["ABAB", 2], expected: 4 }
+  - { args: ["AABABBA", 1], expected: 4 }
+  - { args: ["AAAA", 0], expected: 4 }
+  - { args: ["A", 0], expected: 1, hidden: true }
+  - { args: ["ABCDE", 1], expected: 2, hidden: true }
+  - { args: ["ABBB", 2], expected: 4, hidden: true }
+  - { args: ["AABBBCCC", 2], expected: 5, hidden: true }
+hints:
+  - "A window is valid when (window length - count of its most common letter) <= k. Those extra letters are the ones you replace."
+  - "Use a sliding window with counts per letter. Expand `right` each step."
+  - "When the window becomes invalid, move `left` by one. You do not need to shrink the window below the best size you have already found, so the 'max count' can stay stale."
+solution:
+  code: |
+    function characterReplacement(s: string, k: number): number {
+      const counts = new Array<number>(26).fill(0);
+      let left = 0;
+      let maxCount = 0;
+      let best = 0;
+      for (let right = 0; right < s.length; right++) {
+        const index = s.charCodeAt(right) - 65;
+        counts[index]++;
+        maxCount = Math.max(maxCount, counts[index]);
+        while (right - left + 1 - maxCount > k) {
+          counts[s.charCodeAt(left) - 65]--;
+          left++;
+        }
+        best = Math.max(best, right - left + 1);
+      }
+      return best;
+    }
+  explanation: |
+    A window can become one repeated letter if the number of letters that are not the most common one is at most `k`. Keep per-letter counts and the highest count seen in the window. When `length - maxCount` exceeds `k`, slide `left` forward. Because the answer only grows when a bigger `maxCount` appears, an out-of-date `maxCount` never produces a wrong result. One pass, constant memory.
+  time: O(n)
+  space: O(1)

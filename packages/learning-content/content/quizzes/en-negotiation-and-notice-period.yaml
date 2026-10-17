@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is a good way to answer 'What are your salary expectations?'"
+    options:
+      - "Whatever you give is fine."
+      - "A range with a reason, based on my experience and the market."
+      - "A very high number without a reason."
+    answer: 1
+    explanation: "A range with a reason shows that you did your research and keeps the conversation open."
+  - kind: single
+    prompt: "What should you do if you need time to decide on an offer?"
+    options:
+      - "Ask politely for a few days and reply on time"
+      - "Disappear without a reply"
+      - "Accept immediately without reading it"
+    answer: 0
+    explanation: "It is normal to ask for a few days. Then keep your promise and reply."
+  - kind: multiple
+    prompt: "Select all the things you should do before a salary discussion."
+    options:
+      - "Research the market range"
+      - "Think about the full package, not only the base salary"
+      - "Check your notice period in the contract"
+      - "Invent another offer"
+    answer: [0, 1, 2]
+    explanation: "Research and preparation help. Never invent an offer."
+  - kind: true-false
+    prompt: "It is acceptable to lie about your current salary or other offers to get a better deal."
+    answer: false
+    explanation: "Always be honest. False claims can cancel an offer and damage your reputation."

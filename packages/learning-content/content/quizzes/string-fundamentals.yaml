@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What happens when you read s[99] on a string with 9 characters?"
+    options:
+      - "It throws an error"
+      - "It returns undefined"
+      - "It returns an empty string"
+    answer: 1
+    explanation: "Out-of-range indexing in JavaScript returns undefined. Check bounds yourself."
+  - kind: single
+    prompt: "What is the best way to build a long string inside a loop?"
+    options:
+      - "Slice the old string each time"
+      - "Collect parts in an array and call join once"
+      - "Assign characters by index"
+    answer: 1
+    explanation: "Joining once is linear. Repeated slicing or copying makes the loop quadratic."
+  - kind: multiple
+    prompt: "Which statements about JavaScript strings are true?"
+    options:
+      - "Strings are immutable"
+      - "s[0] = 'x' changes the first character"
+      - "charCodeAt(0) - 97 turns 'a' to 'z' into 0 to 25"
+      - "The length of '😀' is 1"
+    answer: [0, 2]
+    explanation: "Assigning to an index does nothing, and an emoji has length 2 because it uses two 16-bit units."
+  - kind: true-false
+    prompt: "Calling slice inside a loop over the string can turn an O(n) solution into O(n^2)."
+    answer: true
+    explanation: "Each slice copies characters, so the cost per iteration is O(n)."

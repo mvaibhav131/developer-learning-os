@@ -1,0 +1,26 @@
+name: developer-learning-os
+
+# One container: the API plus the web app it serves. Your progress is stored in the dlos-data volume.
+#   docker compose up -d --build        then open http://localhost:8080
+#   docker compose --env-file .env.docker up -d --build        to change the settings below
+services:
+  app:
+    build: .
+    image: ghcr.io/mvaibhav131/developer-learning-os:latest
+    restart: unless-stopped
+    ports:
+      # Bound to this machine only. Without sign-in the app has no protection, so do not publish it to the internet as is.
+      - "${BIND_ADDRESS:-127.0.0.1}:${PORT:-8080}:4000"
+    environment:
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:${PORT:-8080}}
+      APP_TIMEZONE: ${APP_TIMEZONE:-Asia/Kolkata}
+      OWNER_DISPLAY_NAME: ${OWNER_DISPLAY_NAME:-Learner}
+      TRUST_PROXY: ${TRUST_PROXY:-0}
+      BASIC_AUTH_USER: ${BASIC_AUTH_USER:-}
+      BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD:-}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      - dlos-data:/data
+
+volumes:
+  dlos-data:

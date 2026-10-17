@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "How long is the daily speaking routine in this lesson?"
+    options:
+      - "15 minutes"
+      - "2 hours"
+      - "5 hours per week"
+    answer: 0
+    explanation: "The plan is 15 minutes: warm-up, shadowing, speak and record, review."
+  - kind: single
+    prompt: "What should you do if you miss a day?"
+    options:
+      - "Give up and restart the plan next month"
+      - "Do two hours the next day"
+      - "Do a short five-minute session the next day"
+    answer: 2
+    explanation: "Never skip two days in a row. A short session keeps the habit alive."
+  - kind: multiple
+    prompt: "Select all the steps that are part of the routine."
+    options:
+      - "Warm-up with practice phrases"
+      - "Shadowing a short clip"
+      - "Recording your own answer"
+      - "Memorising a grammar book"
+    answer: [0, 1, 2]
+    explanation: "The routine includes a warm-up, shadowing, a recorded answer and a review of your mistakes."
+  - kind: true-false
+    prompt: "You should mark a lesson complete only after doing the practice, not only after reading."
+    answer: true
+    explanation: "Honest progress tracking means marking a lesson complete when you have really practised it."

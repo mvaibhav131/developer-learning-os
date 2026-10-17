@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is habit stacking?"
+    options:
+      - "Doing ten new habits at once"
+      - "Attaching a new habit to something you already do every day"
+      - "Keeping a pile of English books"
+    answer: 1
+    explanation: "For example: after I make my morning tea, I read five practice phrases aloud."
+  - kind: single
+    prompt: "What should you do on a very busy day?"
+    options:
+      - "Skip it completely"
+      - "Do the five-minute version"
+      - "Do three hours the next day"
+    answer: 1
+    explanation: "A tiny session keeps the habit alive. Never skip twice in a row."
+  - kind: multiple
+    prompt: "Select all the principles of a lasting habit."
+    options:
+      - "Make it tiny"
+      - "Tie it to a trigger"
+      - "Track it"
+      - "Wait until you feel motivated"
+    answer: [0, 1, 2]
+    explanation: "Motivation changes every day. A small habit with a trigger and a record is more reliable."
+  - kind: true-false
+    prompt: "A good English plan can promise fluency in 30 days."
+    answer: false
+    explanation: "Progress depends on regular practice, and nobody can honestly promise a fixed number of days."

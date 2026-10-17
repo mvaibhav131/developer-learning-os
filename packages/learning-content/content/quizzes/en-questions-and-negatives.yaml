@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which question is correct?"
+    options:
+      - "Does he works here?"
+      - "Does he work here?"
+      - "Do he work here?"
+    answer: 1
+    explanation: "After does, the main verb stays in its base form. The -s is already carried by 'does'."
+  - kind: single
+    prompt: "Which sentence is correct in the past?"
+    options:
+      - "Did you pushed the code?"
+      - "Do you pushed the code?"
+      - "Did you push the code?"
+    answer: 2
+    explanation: "Did already shows the past tense, so the main verb goes back to the base form: push."
+  - kind: multiple
+    prompt: "Select all the correct questions."
+    options:
+      - "Why did the build fail?"
+      - "Where you are going?"
+      - "What does this function return?"
+      - "You can review this?"
+    answer: [0, 2]
+    explanation: "Questions need the helper before the subject: did the build, does this function. 'Where you are going' has the wrong order."
+  - kind: true-false
+    prompt: "You must add do or does before the subject in the question 'Is the build green?'."
+    answer: false
+    explanation: "When the sentence already has am, is or are, you only swap the order. Adding do or does would be wrong."

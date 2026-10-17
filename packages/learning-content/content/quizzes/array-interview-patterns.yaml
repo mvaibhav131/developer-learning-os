@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What question does Kadane's algorithm ask at each index?"
+    options:
+      - "What is the sum of the whole array?"
+      - "What is the best subarray that ends at this index?"
+      - "What is the smallest element so far?"
+    answer: 1
+    explanation: "The best subarray ending here is either the current element alone or the current element added to the previous best."
+  - kind: single
+    prompt: "Why should you not start the running maximum at 0 in Maximum Subarray?"
+    options:
+      - "Zero is not a valid number"
+      - "All numbers may be negative, so the correct answer could be below 0"
+      - "It makes the code slower"
+    answer: 1
+    explanation: "For [-3, -2, -1] the answer is -1. A maximum that starts at 0 would wrongly return 0."
+  - kind: multiple
+    prompt: "Which problems are good matches for sorting the input first and then scanning?"
+    options:
+      - "Finding duplicates when the original order does not matter"
+      - "Merging overlapping intervals"
+      - "Finding the best contiguous subarray in the original order"
+      - "Pairs that add up to a target (with two pointers)"
+    answer: [0, 1, 3]
+    explanation: "Sorting changes the order, so it would break problems that depend on contiguous original positions."
+  - kind: true-false
+    prompt: "Best Time to Buy and Sell Stock can be solved in one pass with O(1) extra space."
+    answer: true
+    explanation: "Keep the lowest price seen so far and the best profit. No extra data structure is needed."

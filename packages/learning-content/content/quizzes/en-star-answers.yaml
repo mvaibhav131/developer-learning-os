@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does STAR stand for?"
+    options:
+      - "Situation, Task, Action, Result"
+      - "Skill, Team, Answer, Review"
+      - "Story, Time, Attitude, Result"
+    answer: 0
+    explanation: "STAR is Situation, Task, Action, Result."
+  - kind: single
+    prompt: "Which part of the STAR answer should be the longest?"
+    options:
+      - "Situation"
+      - "Task"
+      - "Action"
+    answer: 2
+    explanation: "The action shows what you personally did, so spend most of the time there."
+  - kind: multiple
+    prompt: "Select all the good habits in a STAR answer."
+    options:
+      - "Say what you did with the word I"
+      - "Add a number or a clear result"
+      - "Blame a teammate for the problem"
+      - "Keep the story under two minutes"
+    answer: [0, 1, 3]
+    explanation: "Focus on your own actions, show a result and stay short."
+  - kind: true-false
+    prompt: "In a failure story it is useful to explain what you learned and changed afterwards."
+    answer: true
+    explanation: "Interviewers want to see that you learn from mistakes."

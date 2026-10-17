@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "With prefix[0] = 0 and prefix[i + 1] = prefix[i] + nums[i], what is the sum of nums[l..r] (both inclusive)?"
+    options:
+      - "prefix[r] - prefix[l]"
+      - "prefix[r + 1] - prefix[l]"
+      - "prefix[r + 1] - prefix[l + 1]"
+    answer: 1
+    explanation: "prefix[r + 1] is the sum of the first r + 1 elements, and prefix[l] is the sum of the elements before l."
+  - kind: single
+    prompt: "What is the cost of answering one range-sum query after building the prefix array?"
+    options:
+      - "O(1)"
+      - "O(log n)"
+      - "O(n)"
+    answer: 0
+    explanation: "A range sum is two lookups and one subtraction."
+  - kind: multiple
+    prompt: "Which are good reasons to use prefix sums?"
+    options:
+      - "Many range-sum queries on an array that does not change"
+      - "The statement talks about everything to the left and right of an index"
+      - "You need to find the minimum element of an unsorted array once"
+      - "You compute the same partial sums repeatedly inside a loop"
+    answer: [0, 1, 3]
+    explanation: "A one-time minimum needs a single scan, not a prefix array."
+  - kind: true-false
+    prompt: "Product of Array Except Self can be solved by dividing the total product by nums[i] when the array contains zeros."
+    answer: false
+    explanation: "Division by zero breaks the idea. Use prefix and suffix products instead."

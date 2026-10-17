@@ -1,0 +1,36 @@
+# dependencies and build output
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# local databases and backups (your learning data lives here)
+data/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# personal documents (never commit resumes or other personal files)
+/*.pdf
+
+# test artifacts
+playwright-report/
+test-results/
+blob-report/
+.tmp/
+
+# logs and OS files
+*.log
+*.out
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/

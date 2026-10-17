@@ -1,0 +1,50 @@
+slug: is-subsequence
+title: Is Subsequence
+difficulty: easy
+topics: [strings, two-pointers]
+lesson: two-pointers-fast-slow
+function: isSubsequence
+statement: |
+  Given two strings `s` and `t`, return `true` if `s` is a **subsequence** of `t`, or `false` otherwise.
+
+  A subsequence is a string formed by deleting some characters (possibly none) from the original string without changing the order of the remaining characters. For example, `"ace"` is a subsequence of `"abcde"`, but `"aec"` is not.
+constraints: |
+  - `0 <= s.length <= 100`
+  - `0 <= t.length <= 10^4`
+  - `s` and `t` consist of lowercase English letters
+examples:
+  - input: 's = "abc", t = "ahbgdc"'
+    output: "true"
+  - input: 's = "axc", t = "ahbgdc"'
+    output: "false"
+    explanation: 'There is no "x" in t.'
+starter: |
+  function isSubsequence(s: string, t: string): boolean {
+    return false;
+  }
+tests:
+  - { args: ["abc", "ahbgdc"], expected: true }
+  - { args: ["axc", "ahbgdc"], expected: false }
+  - { args: ["", "ahbgdc"], expected: true }
+  - { args: ["b", "abc"], expected: true, hidden: true }
+  - { args: ["aaaaaa", "bbaaaa"], expected: false, hidden: true }
+  - { args: ["ace", "abcde"], expected: true, hidden: true }
+  - { args: ["abc", "ab"], expected: false, hidden: true }
+  - { args: ["leetcode", "yleeyetycodee"], expected: true, hidden: true }
+hints:
+  - "You never need to go backwards: the order of characters must be kept."
+  - "Use one pointer `i` in `s` and scan `t` with another pointer."
+  - "Each time the current character of `t` equals `s[i]`, advance `i`. If `i` reaches the end of `s`, you found every character in order."
+solution:
+  code: |
+    function isSubsequence(s: string, t: string): boolean {
+      let i = 0;
+      for (let j = 0; j < t.length && i < s.length; j++) {
+        if (s[i] === t[j]) i++;
+      }
+      return i === s.length;
+    }
+  explanation: |
+    Walk through `t` once. Whenever the current character matches the next unmatched character of `s`, advance in `s`. If every character of `s` gets matched, the order was preserved and `s` is a subsequence of `t`. An empty `s` is trivially a subsequence.
+  time: O(n)
+  space: O(1)

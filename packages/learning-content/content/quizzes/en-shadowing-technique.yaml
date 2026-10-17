@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is shadowing?"
+    options:
+      - "Writing down everything a speaker says"
+      - "Repeating what a speaker says almost at the same time"
+      - "Translating a speaker's words into Hindi"
+    answer: 1
+    explanation: "In shadowing you listen and repeat right away, copying words, rhythm and intonation."
+  - kind: single
+    prompt: "What is a good clip to start with?"
+    options:
+      - "A very fast 30-minute talk"
+      - "A clear one to two minute clip with a transcript"
+      - "A song with no lyrics"
+    answer: 1
+    explanation: "Short, clear clips with a transcript are easiest. You can then repeat the same clip for several days."
+  - kind: multiple
+    prompt: "Select all the good habits for shadowing practice."
+    options:
+      - "Practice a little every day"
+      - "Copy the stress and the music of the voice"
+      - "Change the clip every day"
+      - "Use headphones in a quiet place"
+    answer: [0, 1, 3]
+    explanation: "Keep the same clip for about five days so the language really becomes yours."
+  - kind: true-false
+    prompt: "Shadowing guarantees that you will be fluent in 30 days."
+    answer: false
+    explanation: "Results depend on regular practice. Shadowing helps, but no practice can promise a fixed number of days."

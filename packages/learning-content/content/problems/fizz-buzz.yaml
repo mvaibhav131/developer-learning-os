@@ -1,0 +1,55 @@
+slug: fizz-buzz
+title: Fizz Buzz
+difficulty: easy
+topics: [arrays, loops, math]
+lesson: arrays-fundamentals
+function: fizzBuzz
+statement: |
+  Given an integer `n`, return an array of strings `answer` (1-indexed) where:
+
+  - `answer[i]` is `"FizzBuzz"` if `i` is divisible by both 3 and 5,
+  - `answer[i]` is `"Fizz"` if `i` is divisible by 3,
+  - `answer[i]` is `"Buzz"` if `i` is divisible by 5,
+  - otherwise `answer[i]` is `i` written as a string.
+
+  This is a warm-up: it checks that you can read the statement, loop, and return the right type.
+constraints: |
+  - `1 <= n <= 10^4`
+examples:
+  - input: "n = 3"
+    output: '["1", "2", "Fizz"]'
+  - input: "n = 5"
+    output: '["1", "2", "Fizz", "4", "Buzz"]'
+starter: |
+  function fizzBuzz(n: number): string[] {
+    const answer: string[] = [];
+    // Loop from 1 to n and push the right string.
+    return answer;
+  }
+tests:
+  - { args: [3], expected: ["1", "2", "Fizz"] }
+  - { args: [5], expected: ["1", "2", "Fizz", "4", "Buzz"] }
+  - { args: [15], expected: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"] }
+  - { args: [1], expected: ["1"], hidden: true }
+  - { args: [10], expected: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"], hidden: true }
+  - { args: [16], expected: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16"], hidden: true }
+hints:
+  - "Use the remainder operator: `i % 3 === 0` means i is divisible by 3."
+  - "Check the 'both' case first. If you check 3 first, 15 becomes plain Fizz."
+  - "Convert a number to a string with `String(i)`."
+solution:
+  code: |
+    function fizzBuzz(n: number): string[] {
+      const answer: string[] = [];
+      for (let i = 1; i <= n; i++) {
+        if (i % 15 === 0) answer.push('FizzBuzz');
+        else if (i % 3 === 0) answer.push('Fizz');
+        else if (i % 5 === 0) answer.push('Buzz');
+        else answer.push(String(i));
+      }
+      return answer;
+    }
+  explanation: |
+    Walk from 1 to n once. A number divisible by both 3 and 5 is divisible by 15, so test that first, then 3, then 5, and fall back to the number itself as a string. One pass and one output entry per number gives linear time and linear output space.
+  time: O(n)
+  space: O(n)

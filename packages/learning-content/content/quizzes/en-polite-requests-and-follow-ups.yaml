@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which request is the most polite and clear?"
+    options:
+      - "Send me the report."
+      - "Could you send me the report by Friday? I need it for the demo."
+      - "Why didn't you send the report?"
+    answer: 1
+    explanation: "A good request is polite and gives what, by when and why."
+  - kind: single
+    prompt: "When should you usually send a first reminder?"
+    options:
+      - "After five minutes"
+      - "After about two working days"
+      - "After one month"
+    answer: 1
+    explanation: "Two working days is a common rule. It gives the person time without making you wait too long."
+  - kind: multiple
+    prompt: "Select all the polite ways to say you cannot do something today."
+    options:
+      - "I'm afraid I can't do it today. I can finish it by Wednesday."
+      - "I'm in the middle of a release. Could we talk tomorrow?"
+      - "No. Not possible."
+      - "Friday might be difficult. Would Monday work?"
+    answer: [0, 1, 3]
+    explanation: "Give a short reason and offer an alternative."
+  - kind: true-false
+    prompt: "It is better to send a new reminder every hour until someone replies."
+    answer: false
+    explanation: "Too many reminders feel pushy. Wait two working days, then try a call."

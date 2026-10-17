@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does 'escalate' mean at work?"
+    options:
+      - "Tell a more senior person about a problem"
+      - "Delete a ticket"
+      - "Write a long email"
+    answer: 0
+    explanation: "To escalate an issue means to raise it with someone more senior who can help or decide."
+  - kind: single
+    prompt: "What is a 'deliverable'?"
+    options:
+      - "A meeting snack"
+      - "Something you must hand over"
+      - "A programming language"
+    answer: 1
+    explanation: "A deliverable is a result you must give to the client or the team, for example a working API."
+  - kind: multiple
+    prompt: "Select all the words that describe changing the time of a meeting."
+    options:
+      - "postpone"
+      - "reschedule"
+      - "refactor"
+      - "deploy"
+    answer: [0, 1]
+    explanation: "Postpone and reschedule are about time. Refactor and deploy are about code."
+  - kind: true-false
+    prompt: "The best way to learn new words is to read a long list and not use them."
+    answer: false
+    explanation: "Use each word in your own sentence and in real conversation, a few words each day."

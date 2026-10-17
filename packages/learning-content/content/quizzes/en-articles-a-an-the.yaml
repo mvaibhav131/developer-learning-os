@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "I have laptop."
+      - "I have a laptop."
+      - "I have an laptop."
+    answer: 1
+    explanation: "Laptop is a singular countable noun that starts with a consonant sound, so use a."
+  - kind: single
+    prompt: "Which phrase is correct?"
+    options:
+      - "a HTTP request"
+      - "an HTTP request"
+      - "the HTTP request always"
+    answer: 1
+    explanation: "HTTP is pronounced 'aitch-tee-tee-pee', which starts with a vowel sound, so we say an HTTP request."
+  - kind: multiple
+    prompt: "Select all the sentences with correct article use."
+    options:
+      - "I use Python for data analysis."
+      - "I found a bug. The bug is in the login code."
+      - "She is engineer."
+      - "Developers write tests."
+    answer: [0, 1, 3]
+    explanation: "'She is engineer' needs an: she is an engineer. Languages and general plurals take no article."
+  - kind: true-false
+    prompt: "We say 'the Python' when we mean the programming language in general."
+    answer: false
+    explanation: "Languages and tools as names take no article: I use Python."

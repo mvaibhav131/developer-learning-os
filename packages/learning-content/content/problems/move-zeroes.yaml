@@ -1,0 +1,56 @@
+slug: move-zeroes
+title: Move Zeroes
+difficulty: easy
+topics: [arrays, two-pointers, in-place]
+lesson: two-pointers-fast-slow
+function: moveZeroes
+inPlace: true
+statement: |
+  Given an integer array `nums`, move all `0` values to the **end** of the array while keeping the relative order of the non-zero elements.
+
+  You must do this **in place**, without making a copy of the array. Do not return anything: the grader checks the array you modified.
+constraints: |
+  - `1 <= nums.length <= 10^4`
+  - `-2^31 <= nums[i] <= 2^31 - 1`
+examples:
+  - input: "nums = [0, 1, 0, 3, 12]"
+    output: "[1, 3, 12, 0, 0]"
+  - input: "nums = [0]"
+    output: "[0]"
+starter: |
+  function moveZeroes(nums: number[]): void {
+    // Change `nums` itself. Nothing needs to be returned.
+  }
+tests:
+  - { args: [[0, 1, 0, 3, 12]], expected: [1, 3, 12, 0, 0] }
+  - { args: [[0]], expected: [0] }
+  - { args: [[1, 2, 3]], expected: [1, 2, 3] }
+  - { args: [[0, 0, 1]], expected: [1, 0, 0], hidden: true }
+  - { args: [[4, 0, 5, 0, 0, 6]], expected: [4, 5, 6, 0, 0, 0], hidden: true }
+  - { args: [[0, 0, 0]], expected: [0, 0, 0], hidden: true }
+  - { args: [[1, 0]], expected: [1, 0], hidden: true }
+  - { args: [[-1, 0, -2, 0]], expected: [-1, -2, 0, 0], hidden: true }
+hints:
+  - "Making a new array is easy but the problem wants an in-place change."
+  - "Use a slow pointer `write` that marks where the next non-zero value belongs, and a fast pointer that scans the array."
+  - "Copy each non-zero value to `write` and advance it. When the scan ends, fill the rest of the array with zeros."
+solution:
+  code: |
+    function moveZeroes(nums: number[]): void {
+      let write = 0;
+      for (let read = 0; read < nums.length; read++) {
+        if (nums[read] !== 0) {
+          nums[write] = nums[read];
+          write++;
+        }
+      }
+      while (write < nums.length) {
+        nums[write] = 0;
+        write++;
+      }
+    }
+  explanation: |
+    The fast pointer `read` scans every element. Each non-zero value is copied to the slow pointer `write`, which then advances, so all non-zero values end up at the front in their original order. Afterwards, everything from `write` to the end is set to zero. It is one pass plus a fill, and no extra array.
+  time: O(n)
+  space: O(1)
+videos: [aayNRwUN3Do]

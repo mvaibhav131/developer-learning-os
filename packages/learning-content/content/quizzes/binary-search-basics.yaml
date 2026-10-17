@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does the lower bound return for a sorted array and a target?"
+    options:
+      - "The last index with a value less than or equal to the target"
+      - "The first index whose value is greater than or equal to the target"
+      - "Always the index of the target"
+    answer: 1
+    explanation: "Lower bound is the first position that is not smaller than the target, which is also the insert position."
+  - kind: single
+    prompt: "In the closed-range template (left <= right), what do you do when nums[mid] < target?"
+    options:
+      - "right = mid - 1"
+      - "left = mid + 1"
+      - "left = mid"
+    answer: 1
+    explanation: "mid is too small, so the target must be to the right. Move left past mid."
+  - kind: multiple
+    prompt: "Which are signs that binary search might apply?"
+    options:
+      - "The array is sorted"
+      - "The statement asks for O(log n)"
+      - "You can tell which half to discard by looking at the middle"
+      - "The array is unsorted and you need all pairs"
+    answer: [0, 1, 2]
+    explanation: "All pairs in an unsorted array is not a halving question."
+  - kind: true-false
+    prompt: "With while (left < right), writing left = mid instead of left = mid + 1 can cause an infinite loop."
+    answer: true
+    explanation: "When mid equals left, nothing changes and the loop never ends."

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the best way to start 'Tell me about yourself'?"
+    options:
+      - "Myself Rahul, I belong to a small village."
+      - "I'm Rahul, a backend developer with two years of experience."
+      - "My family has four members."
+    answer: 1
+    explanation: "Start with your name and your professional role."
+  - kind: single
+    prompt: "How long should the answer usually be?"
+    options:
+      - "10 seconds"
+      - "60 to 90 seconds"
+      - "10 minutes"
+    answer: 1
+    explanation: "About 150 to 200 words, so roughly a minute to a minute and a half."
+  - kind: multiple
+    prompt: "Select all the parts of the present-past-future formula."
+    options:
+      - "Who you are now"
+      - "A real achievement from your past work or studies"
+      - "Why you want this role"
+      - "Your full salary history"
+    answer: [0, 1, 2]
+    explanation: "Present, past and future. Do not mention salary history in this answer."
+  - kind: true-false
+    prompt: "You should invent impressive numbers to make your answer stronger."
+    answer: false
+    explanation: "Use only real facts. Interviewers often ask follow-up questions about your claims."

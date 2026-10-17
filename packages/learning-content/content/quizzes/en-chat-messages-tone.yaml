@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is wrong with sending only 'Hi' in a work chat?"
+    options:
+      - "Nothing. It is the best way to start."
+      - "The other person must reply before you even ask, so you lose time"
+      - "It is rude to say hi"
+    answer: 1
+    explanation: "Send the full question in the first message, so it can be answered in one reply."
+  - kind: single
+    prompt: "What does EOD mean?"
+    options:
+      - "End of day"
+      - "Every other day"
+      - "Emergency on duty"
+    answer: 0
+    explanation: "EOD means end of day. For example: I'll send the report by EOD."
+  - kind: multiple
+    prompt: "Select all the parts of a strong chat message."
+    options:
+      - "Context"
+      - "A clear question"
+      - "What you already tried"
+      - "A long joke"
+    answer: [0, 1, 2]
+    explanation: "Context, a question, what you tried and a deadline make a message easy to answer."
+  - kind: true-false
+    prompt: "Writing a message in ALL CAPITAL letters is a good way to show respect."
+    answer: false
+    explanation: "ALL CAPS looks like shouting. Use normal capital letters."

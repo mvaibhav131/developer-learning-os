@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "How many centres do you need to try when you expand around the centre to find palindromes in a string of length n?"
+    options:
+      - "n"
+      - "2n - 1"
+      - "n squared"
+    answer: 1
+    explanation: "There are n single-character centres (odd length) and n - 1 gaps between characters (even length)."
+  - kind: single
+    prompt: "Which pattern fits 'find the first character that does not repeat'?"
+    options:
+      - "Frequency table"
+      - "Binary search"
+      - "Backtracking"
+    answer: 0
+    explanation: "Count every character first, then scan the string in order for the first count of one."
+  - kind: multiple
+    prompt: "Which are good ways to check a palindrome efficiently?"
+    options:
+      - "Two pointers moving inwards from both ends"
+      - "Comparing the string with a reversed copy"
+      - "Slicing the string at every step"
+      - "Skipping non-alphanumeric characters with pointers"
+    answer: [0, 1, 3]
+    explanation: "A reversed copy is simple but uses O(n) space. Slicing in a loop makes the solution slow."
+  - kind: true-false
+    prompt: "For sliding-window string problems, the window only needs a record of what is currently inside it."
+    answer: true
+    explanation: "A Map or count table for the window is updated as the window grows and shrinks."

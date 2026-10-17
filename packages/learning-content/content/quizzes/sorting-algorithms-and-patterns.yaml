@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which comparator sorts numbers in ascending order?"
+    options:
+      - "(a, b) => b - a"
+      - "(a, b) => a - b"
+      - "(a, b) => a > b"
+    answer: 1
+    explanation: "A negative result puts a first. A boolean comparator is unreliable."
+  - kind: single
+    prompt: "What is the worst-case time complexity of quick sort with a poor pivot choice?"
+    options:
+      - "O(n log n)"
+      - "O(n)"
+      - "O(n^2)"
+    answer: 2
+    explanation: "If every partition is extremely unbalanced, the recursion has n levels of O(n) work."
+  - kind: multiple
+    prompt: "Which problems become easy after sorting the input?"
+    options:
+      - "Merging overlapping intervals"
+      - "Finding duplicates"
+      - "Pair sums with two pointers"
+      - "Finding the best contiguous subarray in the original order"
+    answer: [0, 1, 2]
+    explanation: "Sorting destroys the original order, so it cannot be used when order defines the answer."
+  - kind: true-false
+    prompt: "A stable sort keeps equal elements in their original relative order."
+    answer: true
+    explanation: "Merge sort and JavaScript's built-in sort are stable."

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What does [...new Set([1, 2, 2, 3, 3, 3])] return?"
+    options:
+      - "[1, 2, 2, 3, 3, 3]"
+      - "[1, 2, 3]"
+      - "[3, 2, 1]"
+    answer: 1
+    explanation: "A Set keeps each value once and remembers the order of first appearance."
+  - kind: single
+    prompt: "In the longest consecutive sequence solution, when do you start counting a run?"
+    options:
+      - "For every number in the Set"
+      - "Only when value - 1 is NOT in the Set"
+      - "Only for the smallest number"
+    answer: 1
+    explanation: "A number with no predecessor is the start of a run. Starting only there keeps the total work linear."
+  - kind: multiple
+    prompt: "Which statements about Set in JavaScript are true?"
+    options:
+      - "has, add and delete are O(1) on average"
+      - "new Set([[1], [1]]).size is 2"
+      - "A Set can tell you how many times a value appeared"
+      - "A Set remembers insertion order"
+    answer: [0, 1, 3]
+    explanation: "A Set stores unique values only. Use a Map when you need counts."
+  - kind: true-false
+    prompt: "Calling array.includes(x) inside a loop is faster than checking a Set built once."
+    answer: false
+    explanation: "includes scans the array in O(n) each time. A Set lookup is O(1) on average."

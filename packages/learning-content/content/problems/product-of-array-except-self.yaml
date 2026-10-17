@@ -1,0 +1,59 @@
+slug: product-of-array-except-self
+title: Product of Array Except Self
+difficulty: medium
+topics: [arrays, prefix-sum]
+lesson: prefix-sum-basics
+function: productExceptSelf
+statement: |
+  Given an integer array `nums`, return an array `answer` where `answer[i]` is the product of **all the elements of `nums` except `nums[i]`**.
+
+  Do it in `O(n)` time and **without using division**.
+constraints: |
+  - `2 <= nums.length <= 10^5`
+  - `-30 <= nums[i] <= 30`
+  - The product of any prefix or suffix fits in a 32-bit integer
+examples:
+  - input: "nums = [1, 2, 3, 4]"
+    output: "[24, 12, 8, 6]"
+  - input: "nums = [-1, 1, 0, -3, 3]"
+    output: "[0, 0, 9, 0, 0]"
+    explanation: "Any product that includes the 0 is 0. Only the product without it is non-zero."
+starter: |
+  function productExceptSelf(nums: number[]): number[] {
+    return [];
+  }
+tests:
+  - { args: [[1, 2, 3, 4]], expected: [24, 12, 8, 6] }
+  - { args: [[-1, 1, 0, -3, 3]], expected: [0, 0, 9, 0, 0] }
+  - { args: [[2, 3]], expected: [3, 2] }
+  - { args: [[1, 1]], expected: [1, 1], hidden: true }
+  - { args: [[0, 0]], expected: [0, 0], hidden: true }
+  - { args: [[5, 0, 2]], expected: [0, 10, 0], hidden: true }
+  - { args: [[-1, -2, -3]], expected: [6, 3, 2], hidden: true }
+  - { args: [[4, 3, 2, 1, 2]], expected: [12, 16, 24, 48, 24], hidden: true }
+hints:
+  - "Dividing the total product by nums[i] fails when there is a zero, and the problem forbids division."
+  - "answer[i] = (product of everything to the left of i) * (product of everything to the right of i)."
+  - "Fill `answer` with the running left products, then sweep from the right multiplying in the running right product."
+solution:
+  code: |
+    function productExceptSelf(nums: number[]): number[] {
+      const n = nums.length;
+      const answer = new Array<number>(n).fill(1);
+      let left = 1;
+      for (let i = 0; i < n; i++) {
+        answer[i] = left;
+        left *= nums[i];
+      }
+      let right = 1;
+      for (let i = n - 1; i >= 0; i--) {
+        answer[i] *= right;
+        right *= nums[i];
+      }
+      return answer;
+    }
+  explanation: |
+    The product of everything except `nums[i]` is the product of the elements on its left times the product of the elements on its right. A first pass stores every prefix product in the output array. A second pass from the right multiplies in a running suffix product. Two passes, and only the output array is allocated.
+  time: O(n)
+  space: O(1) extra
+videos: [bNvIQI2wAjk]

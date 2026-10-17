@@ -1,0 +1,53 @@
+slug: find-pivot-index
+title: Find Pivot Index
+difficulty: easy
+topics: [arrays, prefix-sum]
+lesson: prefix-sum-basics
+function: pivotIndex
+statement: |
+  Given an array of integers `nums`, return the **leftmost pivot index**. The pivot index is the index where the sum of all numbers strictly to its left equals the sum of all numbers strictly to its right.
+
+  If the index is on the left edge, the left sum is `0`. The same applies to the right edge. If no such index exists, return `-1`.
+constraints: |
+  - `1 <= nums.length <= 10^4`
+  - `-1000 <= nums[i] <= 1000`
+examples:
+  - input: "nums = [1, 7, 3, 6, 5, 6]"
+    output: "3"
+    explanation: "Left sum = 1 + 7 + 3 = 11. Right sum = 5 + 6 = 11."
+  - input: "nums = [1, 2, 3]"
+    output: "-1"
+    explanation: "No index has equal sums on both sides."
+starter: |
+  function pivotIndex(nums: number[]): number {
+    return -1;
+  }
+tests:
+  - { args: [[1, 7, 3, 6, 5, 6]], expected: 3 }
+  - { args: [[1, 2, 3]], expected: -1 }
+  - { args: [[2, 1, -1]], expected: 0 }
+  - { args: [[1]], expected: 0, hidden: true }
+  - { args: [[-1, -1, 0, 1, 1, 0]], expected: 5, hidden: true }
+  - { args: [[0, 0, 0]], expected: 0, hidden: true }
+  - { args: [[-1, 1, 2]], expected: 2, hidden: true }
+  - { args: [[5, 5]], expected: -1, hidden: true }
+hints:
+  - "Computing the left and right sum for every index from scratch is O(n^2)."
+  - "Compute the total sum once. While scanning, keep a running `leftSum`."
+  - "At index i the right sum is `total - leftSum - nums[i]`. Return i when it equals `leftSum`."
+solution:
+  code: |
+    function pivotIndex(nums: number[]): number {
+      const total = nums.reduce((sum, value) => sum + value, 0);
+      let leftSum = 0;
+      for (let i = 0; i < nums.length; i++) {
+        if (leftSum === total - leftSum - nums[i]) return i;
+        leftSum += nums[i];
+      }
+      return -1;
+    }
+  explanation: |
+    The right sum of index i can be computed from the total: everything that is not on the left and not the element itself. So one pass with a running left sum is enough. Return the first index where the two sides are equal, which is automatically the leftmost one.
+  time: O(n)
+  space: O(1)
+videos: [yuws7YK0Yng]

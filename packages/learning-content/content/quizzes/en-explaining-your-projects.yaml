@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What should a strong project answer include besides the technology?"
+    options:
+      - "Only the list of tools"
+      - "The problem, your role, the challenge and the result"
+      - "The names of everyone in the team"
+    answer: 1
+    explanation: "Interviewers want to understand the problem, what you did and what changed."
+  - kind: single
+    prompt: "When should you use 'I' instead of 'we'?"
+    options:
+      - "For what you personally did"
+      - "Never"
+      - "For every sentence"
+    answer: 0
+    explanation: "Use I for your own work and we for team decisions."
+  - kind: multiple
+    prompt: "Select all the strong verbs for describing your work."
+    options:
+      - "designed"
+      - "implemented"
+      - "optimised"
+      - "did"
+    answer: [0, 1, 2]
+    explanation: "Specific verbs show exactly what you did. 'Did' is too general."
+  - kind: true-false
+    prompt: "It is a good idea to describe your project in the past simple, and what the system does in the present simple."
+    answer: true
+    explanation: "For example: 'I built the API.' and 'The app sends an email when a book is available.'"

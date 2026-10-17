@@ -1,0 +1,26 @@
+# Render blueprint: New > Blueprint > pick this repository. Template, not tested by the author.
+# A persistent disk needs a paid plan. On a free plan the file system is wiped on every deploy and restart,
+# which would erase your progress. Set BASIC_AUTH_USER and BASIC_AUTH_PASSWORD in the dashboard when asked.
+services:
+  - type: web
+    name: developer-learning-os
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /api/v1/health
+    disk:
+      name: dlos-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: API_PORT
+        value: "10000"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: APP_TIMEZONE
+        value: Asia/Kolkata
+      - key: BASIC_AUTH_USER
+        sync: false
+      - key: BASIC_AUTH_PASSWORD
+        sync: false

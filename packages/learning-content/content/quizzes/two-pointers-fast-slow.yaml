@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "In the read and write pointer pattern, what does everything before the write pointer represent?"
+    options:
+      - "The elements that have not been checked yet"
+      - "The finished result so far"
+      - "Only the zeros"
+    answer: 1
+    explanation: "The slow pointer marks the end of the result being built in place."
+  - kind: single
+    prompt: "How do you detect a cycle in a linked list with O(1) extra space?"
+    options:
+      - "Store every visited node in a Set"
+      - "Move one pointer one step and another two steps and see whether they meet"
+      - "Reverse the list"
+    answer: 1
+    explanation: "This is Floyd's tortoise and hare. If there is a cycle, the fast pointer catches the slow one."
+  - kind: multiple
+    prompt: "Which problems use the same read and write pointer skeleton?"
+    options:
+      - "Move Zeroes"
+      - "Remove Duplicates from Sorted Array"
+      - "Remove Element"
+      - "Two Sum II"
+    answer: [0, 1, 2]
+    explanation: "Two Sum II uses pointers at opposite ends, a different pattern."
+  - kind: true-false
+    prompt: "To check that s is a subsequence of t, you advance the pointer in s only when the current characters match."
+    answer: true
+    explanation: "The pointer in t always moves. The pointer in s moves only on a match."

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence is the most polite way to disagree?"
+    options:
+      - "You are wrong."
+      - "I see your point, but I'm not sure that will work. What if we use a cache?"
+      - "No, that's impossible."
+    answer: 1
+    explanation: "Acknowledge the other person, soften your statement, and suggest an alternative."
+  - kind: single
+    prompt: "What does the prefix 'nit:' mean in a code review comment?"
+    options:
+      - "A very important issue that blocks the merge"
+      - "A small, optional point"
+      - "A joke"
+    answer: 1
+    explanation: "A nit is a small suggestion, such as a style or naming point, that the author may choose to fix."
+  - kind: multiple
+    prompt: "Select all the polite ways to give feedback on code."
+    options:
+      - "Could we add a test for the error case?"
+      - "Why did you write this? It is wrong."
+      - "I think this might fail for an empty list. What do you think?"
+      - "Could you help me understand why we chose this approach?"
+    answer: [0, 2, 3]
+    explanation: "Polite feedback talks about the code, uses questions and we, and gives a reason."
+  - kind: true-false
+    prompt: "A disagreement without a reason is stronger than one with a reason."
+    answer: false
+    explanation: "A reason makes a disagreement useful. Without it, it sounds like a personal opinion."

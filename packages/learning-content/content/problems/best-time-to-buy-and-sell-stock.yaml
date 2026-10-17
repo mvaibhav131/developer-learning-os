@@ -1,0 +1,53 @@
+slug: best-time-to-buy-and-sell-stock
+title: Best Time to Buy and Sell Stock
+difficulty: easy
+topics: [arrays, greedy, one-pass]
+lesson: array-interview-patterns
+function: maxProfit
+statement: |
+  You are given an array `prices` where `prices[i]` is the price of a stock on day `i`.
+
+  Choose **one day to buy** and a **later day to sell**. Return the maximum profit you can make. If no profit is possible, return `0`.
+constraints: |
+  - `1 <= prices.length <= 10^5`
+  - `0 <= prices[i] <= 10^4`
+examples:
+  - input: "prices = [7, 1, 5, 3, 6, 4]"
+    output: "5"
+    explanation: "Buy on day 2 (price 1) and sell on day 5 (price 6): 6 - 1 = 5."
+  - input: "prices = [7, 6, 4, 3, 1]"
+    output: "0"
+    explanation: "Prices only fall, so it is best not to trade at all."
+starter: |
+  function maxProfit(prices: number[]): number {
+    return 0;
+  }
+tests:
+  - { args: [[7, 1, 5, 3, 6, 4]], expected: 5 }
+  - { args: [[7, 6, 4, 3, 1]], expected: 0 }
+  - { args: [[2, 4, 1]], expected: 2 }
+  - { args: [[1]], expected: 0, hidden: true }
+  - { args: [[1, 2]], expected: 1, hidden: true }
+  - { args: [[3, 3, 3]], expected: 0, hidden: true }
+  - { args: [[2, 1, 2, 0, 1]], expected: 1, hidden: true }
+  - { args: [[5, 1, 10, 2, 9]], expected: 9, hidden: true }
+hints:
+  - "Brute force tries every buy day and every later sell day. That is O(n^2)."
+  - "For a fixed sell day, the best buy day is the cheapest price seen before it."
+  - "Walk once, remember the lowest price so far, and track the best difference `price - lowest`."
+solution:
+  code: |
+    function maxProfit(prices: number[]): number {
+      let lowest = Infinity;
+      let best = 0;
+      for (const price of prices) {
+        if (price < lowest) lowest = price;
+        else best = Math.max(best, price - lowest);
+      }
+      return best;
+    }
+  explanation: |
+    For every possible sell day the ideal purchase is the cheapest earlier price. Scan left to right keeping that cheapest price. At each day, compare the profit of selling today with the best profit so far. One pass, constant memory.
+  time: O(n)
+  space: O(1)
+videos: [1pkOgXD63yU]

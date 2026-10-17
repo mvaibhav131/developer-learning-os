@@ -1,0 +1,38 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the time complexity of two nested loops that each run over an array of n elements?"
+    options:
+      - "O(n)"
+      - "O(n log n)"
+      - "O(n^2)"
+      - "O(2^n)"
+    answer: 2
+    explanation: "Nested loops multiply: n iterations of the outer loop times n iterations of the inner loop gives O(n^2)."
+  - kind: single
+    prompt: "An input has up to 100,000 elements. Which time complexity is the realistic target?"
+    options:
+      - "O(n^2)"
+      - "O(n log n) or O(n)"
+      - "O(2^n)"
+      - "O(n!)"
+    answer: 1
+    explanation: "n^2 would be 10^10 steps, which is far too slow. n log n or n stays well under 10^8 steps."
+  - kind: multiple
+    prompt: "Which array operations take O(n) time in JavaScript?"
+    options:
+      - "arr.shift()"
+      - "arr.push(x)"
+      - "arr.includes(x)"
+      - "arr[i]"
+    answer: [0, 2]
+    explanation: "shift moves every element, and includes may scan the whole array. push is amortized O(1) and indexing is O(1)."
+  - kind: true-false
+    prompt: "Two loops that run one after the other over the same array make the solution O(n^2)."
+    answer: false
+    explanation: "Sequential loops add: O(n) + O(n) is still O(n). Only nested loops multiply."
+  - kind: true-false
+    prompt: "A solution that uses a Map holding up to n entries has O(n) space complexity."
+    answer: true
+    explanation: "The extra memory grows in proportion to the input size, so space is O(n)."

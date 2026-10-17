@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What property must the check function have for binary search on the answer?"
+    options:
+      - "It must be monotonic: once it is true it stays true for larger answers (or the reverse)"
+      - "It must return a number"
+      - "It must be recursive"
+    answer: 0
+    explanation: "Monotonic results are what let you discard half of the answer range after each check."
+  - kind: single
+    prompt: "In Koko Eating Bananas, what are sensible bounds for the eating speed?"
+    options:
+      - "0 and the number of piles"
+      - "1 and the largest pile"
+      - "the smallest pile and the total bananas"
+    answer: 1
+    explanation: "The speed must be at least 1, and the largest pile size always finishes each pile in one hour."
+  - kind: multiple
+    prompt: "Which phrases suggest binary search on the answer?"
+    options:
+      - "the minimum speed that finishes in h hours"
+      - "the smallest capacity that ships all packages in D days"
+      - "the maximum possible value of the minimum distance"
+      - "return all pairs that add up to target"
+    answer: [0, 1, 2]
+    explanation: "Finding all pairs is not an optimisation over a monotonic answer range."
+  - kind: true-false
+    prompt: "If feasible(mid) is true, the template sets right = mid because a smaller answer may also work."
+    answer: true
+    explanation: "mid works, so the answer is at mid or to its left. Keep mid and search lower."

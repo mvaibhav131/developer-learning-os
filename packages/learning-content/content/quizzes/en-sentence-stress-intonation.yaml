@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which type of word is normally stressed in a sentence?"
+    options:
+      - "Articles like a and the"
+      - "Content words like nouns and main verbs"
+      - "Prepositions like to and of"
+    answer: 1
+    explanation: "Content words carry the meaning, so they are stressed. Function words are short and weak."
+  - kind: single
+    prompt: "How does the voice usually move at the end of a yes or no question such as 'Is the build green?'"
+    options:
+      - "It falls"
+      - "It stays flat"
+      - "It rises"
+    answer: 2
+    explanation: "Yes or no questions usually end with a rising voice. Wh- questions and statements usually fall."
+  - kind: multiple
+    prompt: "Select all the function words in the sentence 'I can fix the bug in the module'."
+    options:
+      - "can"
+      - "fix"
+      - "the"
+      - "in"
+    answer: [0, 2, 3]
+    explanation: "Can, the and in are function words. Fix, bug and module are content words."
+  - kind: true-false
+    prompt: "'Can' is normally pronounced with a weak sound, but 'can't' is pronounced strongly and clearly."
+    answer: true
+    explanation: "That is why stress on the negative is important. A weak 'can' could be misheard as a yes."

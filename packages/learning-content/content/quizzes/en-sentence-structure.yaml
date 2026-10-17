@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence has the correct English word order?"
+    options:
+      - "I tea drink every day."
+      - "I drink tea every day."
+      - "Every day tea I drink."
+    answer: 1
+    explanation: "English follows Subject + Verb + Object. The verb comes right after the subject, then the object."
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "Server slow today."
+      - "The server slow is today."
+      - "The server is slow today."
+    answer: 2
+    explanation: "Sentences that describe a state need am, is or are. English does not drop the verb."
+  - kind: multiple
+    prompt: "Select all the sentences with natural word order."
+    options:
+      - "We review pull requests every morning."
+      - "Where you are going?"
+      - "Yesterday, I deployed the fix to production."
+      - "I very like this framework."
+    answer: [0, 2]
+    explanation: "Time can come at the end or at the start (with a comma). The other two break English word order: questions need the helping verb first, and 'very' does not go with verbs."
+  - kind: true-false
+    prompt: "In a normal English sentence the verb usually comes at the end, like in Hindi."
+    answer: false
+    explanation: "Hindi is Subject-Object-Verb. English is Subject-Verb-Object, so the verb follows the subject."

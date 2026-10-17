@@ -1,0 +1,52 @@
+slug: group-anagrams
+title: Group Anagrams
+difficulty: medium
+topics: [strings, hash-map, sorting]
+lesson: hashing-interview-patterns
+function: groupAnagrams
+ordering: any-order-groups
+statement: |
+  Given an array of strings `words`, group the anagrams together and return the groups.
+
+  The groups may be returned in any order, and the words inside a group may also be in any order.
+constraints: |
+  - `1 <= words.length <= 10^4`
+  - `0 <= words[i].length <= 100`
+  - `words[i]` contains lowercase English letters
+examples:
+  - input: 'words = ["eat", "tea", "tan", "ate", "nat", "bat"]'
+    output: '[["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]'
+  - input: 'words = [""]'
+    output: '[[""]]'
+starter: |
+  function groupAnagrams(words: string[]): string[][] {
+    return [];
+  }
+tests:
+  - { args: [["eat", "tea", "tan", "ate", "nat", "bat"]], expected: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]] }
+  - { args: [[""]], expected: [[""]] }
+  - { args: [["a"]], expected: [["a"]] }
+  - { args: [["abc", "bca", "cab", "xyz"]], expected: [["abc", "bca", "cab"], ["xyz"]], hidden: true }
+  - { args: [["", ""]], expected: [["", ""]], hidden: true }
+  - { args: [["ab", "ba", "abb", "bab", "bba", "aab"]], expected: [["ab", "ba"], ["abb", "bab", "bba"], ["aab"]], hidden: true }
+hints:
+  - "Words in the same group look identical once their letters are put in a fixed order."
+  - "Use that fixed-order form as a Map key and keep an array of words for each key."
+  - "Sorting the letters gives the key in O(k log k) per word; a 26-slot letter count gives it in O(k)."
+solution:
+  code: |
+    function groupAnagrams(words: string[]): string[][] {
+      const groups = new Map<string, string[]>();
+      for (const word of words) {
+        const key = [...word].sort().join('');
+        const bucket = groups.get(key);
+        if (bucket) bucket.push(word);
+        else groups.set(key, [word]);
+      }
+      return [...groups.values()];
+    }
+  explanation: |
+    Anagrams share the same sorted letters, so the sorted string is a canonical key. Put each word into the bucket for its key and return all buckets. With `n` words of length at most `k`, sorting each word dominates the running time.
+  time: O(n * k log k)
+  space: O(n * k)
+videos: [vzdNOK2oB2E]

@@ -1,0 +1,50 @@
+slug: longest-common-prefix
+title: Longest Common Prefix
+difficulty: easy
+topics: [strings]
+lesson: string-interview-patterns
+function: longestCommonPrefix
+statement: |
+  Write a function that returns the **longest common prefix** shared by all strings in the array `strs`. If there is no common prefix, return an empty string `""`.
+constraints: |
+  - `1 <= strs.length <= 200`
+  - `0 <= strs[i].length <= 200`
+  - `strs[i]` consists of lowercase English letters
+examples:
+  - input: 'strs = ["flower", "flow", "flight"]'
+    output: '"fl"'
+  - input: 'strs = ["dog", "racecar", "car"]'
+    output: '""'
+    explanation: "There is no common prefix."
+starter: |
+  function longestCommonPrefix(strs: string[]): string {
+    return "";
+  }
+tests:
+  - { args: [["flower", "flow", "flight"]], expected: "fl" }
+  - { args: [["dog", "racecar", "car"]], expected: "" }
+  - { args: [["interview", "internet", "internal", "interval"]], expected: "inter" }
+  - { args: [["a"]], expected: "a", hidden: true }
+  - { args: [["ab", "a"]], expected: "a", hidden: true }
+  - { args: [["", "b"]], expected: "", hidden: true }
+  - { args: [["same", "same", "same"]], expected: "same", hidden: true }
+  - { args: [["cir", "car"]], expected: "c", hidden: true }
+hints:
+  - "The common prefix can never be longer than the shortest string."
+  - "Compare column by column: take the character at position i of the first string and check that every other string has the same one."
+  - "Stop at the first column where any string differs or runs out of characters. Return the prefix built so far."
+solution:
+  code: |
+    function longestCommonPrefix(strs: string[]): string {
+      const first = strs[0];
+      for (let i = 0; i < first.length; i++) {
+        for (const word of strs) {
+          if (i >= word.length || word[i] !== first[i]) return first.slice(0, i);
+        }
+      }
+      return first;
+    }
+  explanation: |
+    Use the first string as the reference and check one column at a time. For column i, every string must have a character there and it must match the reference. The first column where that fails marks the end of the common prefix. If no column fails, the whole first string is the prefix. The work is bounded by the total number of characters.
+  time: O(S), where S is the total number of characters
+  space: O(1)

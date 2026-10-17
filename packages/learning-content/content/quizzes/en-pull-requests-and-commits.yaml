@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which commit subject is the best?"
+    options:
+      - "changes"
+      - "fixed bug"
+      - "Fix crash when the token is missing"
+    answer: 2
+    explanation: "Start with a verb in the base form and name the exact problem."
+  - kind: single
+    prompt: "In Conventional Commits, which type is used for a bug fix?"
+    options:
+      - "feat"
+      - "fix"
+      - "chore"
+    answer: 1
+    explanation: "fix is for bug fixes, feat for new features, chore for maintenance."
+  - kind: multiple
+    prompt: "Select all the useful sections of a pull request description."
+    options:
+      - "What the change does"
+      - "Why it is needed"
+      - "How to test it"
+      - "A personal story about your weekend"
+    answer: [0, 1, 2]
+    explanation: "What, why, how to test and risks help the reviewer. A weekend story does not."
+  - kind: true-false
+    prompt: "A review comment that starts with 'nit:' means the issue must be fixed before the merge."
+    answer: false
+    explanation: "Nit is a small, optional point. Blocking is used for something that must be fixed first."

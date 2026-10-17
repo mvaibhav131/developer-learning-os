@@ -1,0 +1,62 @@
+slug: valid-parentheses
+title: Valid Parentheses
+difficulty: easy
+topics: [strings, stack]
+lesson: stack-fundamentals
+function: isValid
+statement: |
+  Given a string `s` containing only the characters `(`, `)`, `{`, `}`, `[` and `]`, determine whether the input is **valid**.
+
+  A string is valid when:
+
+  1. Every open bracket is closed by the **same type** of bracket.
+  2. Open brackets are closed in the **correct order**.
+  3. Every closing bracket has a matching open bracket.
+constraints: |
+  - `1 <= s.length <= 10^4`
+  - `s` consists only of `()[]{}`
+examples:
+  - input: 's = "()[]{}"'
+    output: "true"
+  - input: 's = "(]"'
+    output: "false"
+    explanation: "The type of the closing bracket does not match."
+  - input: 's = "([)]"'
+    output: "false"
+    explanation: "The brackets are closed in the wrong order."
+starter: |
+  function isValid(s: string): boolean {
+    return false;
+  }
+tests:
+  - { args: ["()"], expected: true }
+  - { args: ["()[]{}"], expected: true }
+  - { args: ["(]"], expected: false }
+  - { args: ["([)]"], expected: false, hidden: true }
+  - { args: ["{[]}"], expected: true, hidden: true }
+  - { args: ["("], expected: false, hidden: true }
+  - { args: [")"], expected: false, hidden: true }
+  - { args: ["(("], expected: false, hidden: true }
+  - { args: ["[({})]"], expected: true, hidden: true }
+hints:
+  - "The most recently opened bracket must be the first one to close. Which data structure gives you last-in, first-out?"
+  - "Push every opening bracket on a stack. For a closing bracket, the top of the stack must be its matching opener."
+  - "If the stack is empty or the top does not match, return false. At the end the stack must be empty."
+solution:
+  code: |
+    function isValid(s: string): boolean {
+      const pairs: Record<string, string> = { ')': '(', ']': '[', '}': '{' };
+      const stack: string[] = [];
+      for (const ch of s) {
+        if (ch === '(' || ch === '[' || ch === '{') {
+          stack.push(ch);
+        } else if (stack.pop() !== pairs[ch]) {
+          return false;
+        }
+      }
+      return stack.length === 0;
+    }
+  explanation: |
+    Brackets must close in the reverse order they were opened, which is exactly how a stack works. Push openers; for each closer, pop the top and check that it is the matching opener (an empty stack pops `undefined`, which never matches). If everything matched and nothing is left open, the string is valid.
+  time: O(n)
+  space: O(n)

@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is a chunk?"
+    options:
+      - "A long, complex sentence"
+      - "A group of words you learn and say together, such as 'I'll get back to you'"
+      - "A single difficult word"
+    answer: 1
+    explanation: "Chunks are ready-made groups of words. You say them without building the grammar from scratch."
+  - kind: single
+    prompt: "You forget the English word for 'charger'. What should you do?"
+    options:
+      - "Stop speaking until you remember it"
+      - "Say it in Hindi"
+      - "Explain it with simple words, such as 'the cable for my laptop', and continue"
+    answer: 2
+    explanation: "Talking around the word keeps the conversation going. You can look up the word afterwards."
+  - kind: multiple
+    prompt: "Select all the habits that help you think in English."
+    options:
+      - "Narrate your day in English"
+      - "Write three sentences every day"
+      - "Translate every sentence from Hindi word by word"
+      - "Describe your code aloud in English"
+    answer: [0, 1, 3]
+    explanation: "Narration, a short journal and explaining code all build English thinking. Word-by-word translation keeps you slow."
+  - kind: true-false
+    prompt: "You should wait until your English is perfect before you start speaking."
+    answer: false
+    explanation: "Mistakes show you what to practice next. Learners who keep speaking improve faster."

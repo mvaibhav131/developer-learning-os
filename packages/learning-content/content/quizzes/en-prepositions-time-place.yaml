@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "Which sentence is correct?"
+    options:
+      - "The meeting is on 10 am."
+      - "The meeting is at 10 am."
+      - "The meeting is in 10 am."
+    answer: 1
+    explanation: "Use at for an exact point in time such as a clock time."
+  - kind: single
+    prompt: "Which sentence means 'no later than Friday'?"
+    options:
+      - "Please send the report until Friday."
+      - "Please send the report by Friday."
+      - "Please send the report at Friday."
+    answer: 1
+    explanation: "By means not later than. Until means up to a time and the situation continues."
+  - kind: multiple
+    prompt: "Select all the correct sentences."
+    options:
+      - "I am good at Java."
+      - "I am interested for AI."
+      - "It depends on the cache."
+      - "I live at Pune."
+    answer: [0, 2]
+    explanation: "Good at and depend on are correct. Say interested in AI and I live in Pune."
+  - kind: true-false
+    prompt: "We say 'I will reach to the office at 9' in correct English."
+    answer: false
+    explanation: "Reach does not take a preposition: I will reach the office at 9."

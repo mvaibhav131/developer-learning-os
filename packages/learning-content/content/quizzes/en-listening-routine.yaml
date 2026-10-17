@@ -1,0 +1,32 @@
+title: Check your understanding
+passPercent: 70
+questions:
+  - kind: single
+    prompt: "What is the best level for a practice video?"
+    options:
+      - "Exactly the same as your level, so you understand everything"
+      - "Slightly above your level, so you understand about 70 percent"
+      - "Very difficult, so you understand almost nothing"
+    answer: 1
+    explanation: "Slightly harder material makes you work, but you can still follow the main idea."
+  - kind: single
+    prompt: "What is the first pass in the three-pass method?"
+    options:
+      - "Watch without subtitles and note the main idea"
+      - "Read the full transcript"
+      - "Translate to Hindi"
+    answer: 0
+    explanation: "Pass one is about the gist, without subtitles."
+  - kind: multiple
+    prompt: "Select all the useful tools in a video player for listening practice."
+    options:
+      - "Slower speed for hard parts"
+      - "English captions on the second pass"
+      - "Repeating a short part"
+      - "Leaving the video on in the background while you do other work"
+    answer: [0, 1, 2]
+    explanation: "Passive background listening does not replace focused practice."
+  - kind: true-false
+    prompt: "Dictation means writing exactly what you hear, and it helps you see what you miss."
+    answer: true
+    explanation: "Dictation shows which words and sounds you do not catch."

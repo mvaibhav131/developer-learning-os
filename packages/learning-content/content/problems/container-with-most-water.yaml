@@ -1,0 +1,54 @@
+slug: container-with-most-water
+title: Container With Most Water
+difficulty: medium
+topics: [arrays, two-pointers, greedy]
+lesson: two-pointers-opposite-ends
+function: maxArea
+statement: |
+  You are given an integer array `height` of length `n`. There are `n` vertical lines, and line `i` goes from `(i, 0)` to `(i, height[i])`.
+
+  Choose two lines that, together with the x-axis, form a container. Return the **maximum amount of water** a container can store. The water level is limited by the shorter of the two lines, and you may not tilt the container.
+constraints: |
+  - `2 <= height.length <= 10^5`
+  - `0 <= height[i] <= 10^4`
+examples:
+  - input: "height = [1, 8, 6, 2, 5, 4, 8, 3, 7]"
+    output: "49"
+    explanation: "The lines at index 1 (height 8) and index 8 (height 7) are 7 apart. min(8, 7) * 7 = 49."
+  - input: "height = [1, 1]"
+    output: "1"
+starter: |
+  function maxArea(height: number[]): number {
+    return 0;
+  }
+tests:
+  - { args: [[1, 8, 6, 2, 5, 4, 8, 3, 7]], expected: 49 }
+  - { args: [[1, 1]], expected: 1 }
+  - { args: [[4, 3, 2, 1, 4]], expected: 16 }
+  - { args: [[1, 2, 1]], expected: 2, hidden: true }
+  - { args: [[2, 3, 4, 5, 18, 17, 6]], expected: 17, hidden: true }
+  - { args: [[1, 3, 2, 5, 25, 24, 5]], expected: 24, hidden: true }
+  - { args: [[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]], expected: 25, hidden: true }
+hints:
+  - "Area = width * min(left height, right height). Trying every pair is O(n^2)."
+  - "Start with the widest container: pointers at both ends. Then think about which pointer to move."
+  - "Moving the taller line can never help: the width shrinks and the height is still limited by the shorter line. Always move the pointer at the shorter line."
+solution:
+  code: |
+    function maxArea(height: number[]): number {
+      let left = 0;
+      let right = height.length - 1;
+      let best = 0;
+      while (left < right) {
+        const area = (right - left) * Math.min(height[left], height[right]);
+        best = Math.max(best, area);
+        if (height[left] < height[right]) left++;
+        else right--;
+      }
+      return best;
+    }
+  explanation: |
+    Begin with the widest container. Its water level is capped by the shorter wall, so keeping that wall and shrinking the width can only make things worse. The only way to improve is to move the pointer at the shorter wall, hoping for a taller one. Each step removes one line from consideration, so the scan is linear.
+  time: O(n)
+  space: O(1)
+videos: [UuiTKBwPgAo]
