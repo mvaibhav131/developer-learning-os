@@ -1,6 +1,6 @@
 {
   "name": "developer-learning-os",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Developer Learning OS - a local-first personal learning platform for AI engineering, DSA, system design, full-stack mastery and senior interview preparation.",
   "type": "module",
